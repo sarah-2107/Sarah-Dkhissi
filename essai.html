@@ -1,0 +1,1110 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8">
+<title>Portfolio Sarah Dkhissi</title>
+<meta name="description" content="Sarah Dkhissi, consultante marketing et communication à Toulouse : stratégie, création de contenu, personal branding, réseaux sociaux.">
+<meta name="robots" content="noindex, nofollow"><!-- à retirer quand le portfolio est prêt à être partagé -->
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout : l'accueil est une liste de "casting" de clients ; chaque client ouvre un dossier façon brief de campagne (contexte, défi, résultats, livrables). */
+:root{
+  --bg:#ECE2D6;
+  --surface:#F8F8F3;
+  --ink:#36353A;
+  --muted:#6B655F;
+  --line:#D5C8B8;
+  --accent:#DC4F7C;
+  --accent-ink:#FFFFFF;
+  --head:#36353A;
+  --head-ink:#F8F8F3;
+  --paper:#FBFAF6;
+  --display:"Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --body:"Figtree", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --gutter-l:max(clamp(20px, 5vw, 72px), env(safe-area-inset-left, 0px));
+  --gutter-r:max(clamp(20px, 5vw, 72px), env(safe-area-inset-right, 0px));
+  --maxw:1320px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#232227;--surface:#2D2C32;--ink:#F1EBE3;--muted:#ABA49C;--line:#3F3D44;
+    --accent:#EE6E96;--accent-ink:#1F1015;--head:#18171B;--head-ink:#F1EBE3;--paper:#EDE7DF;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#232227;--surface:#2D2C32;--ink:#F1EBE3;--muted:#ABA49C;--line:#3F3D44;
+  --accent:#EE6E96;--accent-ink:#1F1015;--head:#18171B;--head-ink:#F1EBE3;--paper:#EDE7DF;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.48;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--head)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);line-height:1.02;letter-spacing:-0.02em;text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+
+/* Bandeau brouillon */
+.draft{background:var(--accent);color:var(--accent-ink)}
+.draft .wrap{padding-block:9px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:14px}
+.draft b{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;border:1px solid currentColor;border-radius:3px;padding:1px 6px}
+
+/* En-tête */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--head);color:var(--head-ink)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none;letter-spacing:-0.01em;white-space:nowrap}
+.brand span{color:var(--accent)}
+.nav{display:flex;gap:2px;flex-wrap:nowrap}
+.nav a{text-decoration:none;font-weight:500;font-size:15px;padding:6px 12px;border-radius:999px}
+.nav a:hover{color:var(--accent)}
+.nav a[aria-current="page"]{color:var(--accent);font-weight:700}
+
+/* Héros */
+.hero .wrap{padding-block:72px 60px}
+.hero h1{font-size:clamp(44px,8.2vw,108px);font-weight:800;min-width:0}
+.hero-title{display:flex;align-items:center;gap:36px;flex-wrap:wrap;margin-top:14px}
+.polaroid{margin:0;flex:none;background:var(--paper);padding:8px 8px 30px;border-radius:2px;box-shadow:1px 1px 0 rgba(54,53,58,.06),2px 4px 6px rgba(54,53,58,.18),5px 8px 14px rgba(54,53,58,.08);transform:rotate(-3deg)}
+.polaroid img{display:block;width:160px;height:200px;object-fit:cover}
+@media (prefers-reduced-motion:no-preference){.polaroid{transition:transform .25s ease}.polaroid:hover{transform:rotate(0deg) scale(1.04)}}
+/* Arrivée sur l'accueil : jouée une seule fois, au premier affichage. Le titre monte mot par mot, le polaroid se pose puis se développe. */
+.polaroid{position:relative}
+@media (prefers-reduced-motion:no-preference){
+  .hero.intro:not(.go) :is(.eyebrow,.w>span,.polaroid,.lede,.facts-line,.ctas){opacity:0}
+  .hero.intro .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}
+  .hero.intro .w>span{display:inline-block}
+  .hero.go .eyebrow{animation:introFade .5s ease-out backwards}
+  .hero.go .w>span{animation:introWord .75s cubic-bezier(.2,.75,.2,1) backwards;animation-delay:calc(.1s + var(--i)*.09s)}
+  .hero.go .polaroid{animation:introDrop .85s cubic-bezier(.25,.8,.3,1) .38s backwards}
+  .hero.intro .polaroid::after{content:"";position:absolute;inset:8px 8px 30px;background:linear-gradient(160deg,#ddd7cb,#bcb4a5);opacity:0;pointer-events:none}
+  .hero.go .polaroid::after{animation:introDevelop 1.9s ease-in-out .8s backwards}
+  .hero.go .polaroid img{animation:introTone 2.4s ease-out .8s backwards}
+  .hero.go .lede{animation:introFade .6s ease-out .5s backwards}
+  .hero.go .facts-line{animation:introFade .6s ease-out .6s backwards}
+  .hero.go .ctas{animation:introFade .6s ease-out .7s backwards}
+}
+@keyframes introWord{from{transform:translateY(105%)}to{transform:none}}
+@keyframes introFade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes introDrop{0%{opacity:0;transform:translateY(-48px) rotate(-14deg) scale(1.12);box-shadow:0 36px 44px -12px rgba(54,53,58,.28)}55%{opacity:1;transform:translateY(5px) rotate(-1.5deg) scale(.99)}78%{transform:translateY(-2px) rotate(-3.5deg) scale(1.004)}100%{transform:rotate(-3deg)}}
+@keyframes introDevelop{from{opacity:1}to{opacity:0}}
+@keyframes introTone{from{filter:sepia(.7) saturate(.3) contrast(.8) brightness(1.1)}to{filter:none}}
+.facts-line{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:22px;color:var(--muted);font-size:15px}
+.facts-line span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:8px;vertical-align:2px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lede{margin-top:28px;max-width:60ch;font-size:19px;color:var(--muted)}
+.hero .lede strong{color:var(--ink);font-weight:600}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:700 16px/1 var(--body);padding:14px 22px;border-radius:999px;text-decoration:none;border:1.5px solid var(--ink);cursor:pointer;background:transparent;color:var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-1px)}
+@media (prefers-reduced-motion:no-preference){.btn{transition:transform .15s ease}}
+
+
+/* Index des projets */
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;padding-top:40px}
+.section-head h2{font-size:clamp(34px,5vw,56px);font-weight:800}
+.section-head p{color:var(--muted);max-width:44ch}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chip{font:500 14px/1 var(--body);padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--head);color:var(--head-ink);border-color:var(--head)}
+.group-label{margin-top:44px;padding-bottom:10px;border-bottom:1.5px solid var(--ink);display:flex;justify-content:space-between;gap:12px}
+.group-label span:last-child{color:var(--muted)}
+.rows{list-style:none;margin:0;padding:0}
+.row a{display:grid;grid-template-columns:72px minmax(0,1fr) minmax(0,1.1fr) 28px;gap:24px;align-items:center;padding:26px 18px;border-bottom:1px solid var(--line);border-radius:6px;text-decoration:none;position:relative}
+.row .yr{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.row .nm{font-family:var(--display);font-weight:800;font-size:clamp(30px,4.2vw,50px);line-height:1;letter-spacing:-0.025em;display:flex;align-items:center;gap:14px;min-width:0}
+.folder{flex:none;width:44px;height:35px;overflow:visible}
+.folder .back{fill:color-mix(in srgb,var(--brand) 72%,#000)}
+.folder .front{fill:var(--brand)}
+.folder path{stroke:color-mix(in srgb,var(--brand) 55%,#000);stroke-width:.8}
+.folder .shine{fill:none;stroke:#fff;stroke-opacity:.35;stroke-width:1.2}
+.row .meta{min-width:0}
+.row .role{font-weight:600}
+.row .disc{color:var(--muted);font-size:15px}
+.row .arr{font-size:22px;justify-self:end}
+.row a:hover,.row a:focus-visible{background:var(--head);color:var(--head-ink);border-bottom-color:transparent}
+.row a:hover .yr,.row a:hover .disc,.row a:focus-visible .yr,.row a:focus-visible .disc{color:color-mix(in srgb,var(--head-ink) 72%,transparent)}
+.row a:hover .badge{color:var(--head-ink);border-color:var(--head-ink)}
+.row a:hover .folder path:not(.shine),.row a:focus-visible .folder path:not(.shine){stroke:color-mix(in srgb,var(--head-ink) 55%,transparent);stroke-width:1.2}
+@media (prefers-reduced-motion:no-preference){.row a{transition:background-color .3s ease,color .3s ease}.row a .yr,.row a .disc{transition:color .3s ease}.row a .arr{transition:transform .2s ease}.row a:hover .arr{transform:translateX(6px)}.row{transition:opacity .2s ease}}
+.row.dim{opacity:.25}
+.badge{display:inline-block;margin-left:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;border:1px dashed var(--muted);color:var(--muted);border-radius:3px;padding:1px 6px;vertical-align:middle}
+
+/* Dossier client */
+.back{display:inline-flex;gap:8px;margin-top:28px;text-decoration:none;font-weight:500;color:var(--muted)}
+.back:hover{color:var(--ink)}
+.band{margin-top:18px;background:var(--brand);color:var(--brand-fg);position:relative}
+.band .wrap{padding-block:48px 44px}
+.band-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+.band-main{min-width:0}
+.band-logo{position:absolute;top:28px;right:max(28px,env(safe-area-inset-right,0px));display:block;max-width:min(150px,22vw);max-height:40px;width:auto;height:auto;object-fit:contain}
+.band-logo.round{max-height:72px;max-width:72px}
+.band-logo.stack{max-height:62px;max-width:130px}
+@media (max-width:700px){
+  .band-grid{grid-template-columns:1fr}
+  .band-logo{position:static;order:-1;justify-self:start;max-height:36px;max-width:150px}
+  .band-logo.round{max-height:60px;max-width:60px}
+  .band-logo.stack{max-height:52px;max-width:110px}
+}
+.band .eyebrow{opacity:.78}
+.band h1{font-size:clamp(52px,10vw,132px);font-weight:800;margin-top:12px}
+.band .sector{margin-top:16px;font-size:19px;max-width:78ch}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.tags span{font-family:var(--mono);font-size:12px;padding:5px 10px;border-radius:3px;background:color-mix(in srgb,var(--brand-fg) 12%,transparent);border:1px solid color-mix(in srgb,var(--brand-fg) 30%,transparent)}
+.highlight{margin-top:28px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;padding:16px 20px;border-radius:6px;background:var(--surface);border:1px solid var(--line);font-weight:600}
+.highlight .mono{color:var(--accent);font-weight:500}
+.brief{display:grid;grid-template-columns:minmax(0,1fr);gap:36px;padding-block:56px 8px}
+.brief > *{max-width:1000px}
+.brief h2,.block h3{font-size:14px;font-family:var(--mono);font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.brief .ctx p+p{margin-top:12px}
+.defi{border-left:3px solid var(--accent);padding-left:22px}
+.defi p{font-family:var(--display);font-size:clamp(22px,2.4vw,28px);line-height:1.25;font-weight:600;letter-spacing:-0.01em}
+
+.results{padding-top:56px}
+.results-head{display:flex;justify-content:space-between;gap:16px;align-items:baseline;flex-wrap:wrap;border-bottom:1.5px solid var(--ink);padding-bottom:10px}
+.results-head h2{font-size:clamp(26px,3vw,34px);font-weight:800}
+.results-head p{color:var(--muted);font-size:15px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:20px}
+.kpi{border:1.5px dashed var(--line);border-radius:6px;padding:18px 18px 16px;min-width:0;background:var(--surface)}
+.kpi .v{font-family:var(--display);font-weight:800;font-size:42px;line-height:1;color:var(--muted);font-variant-numeric:tabular-nums}
+.kpi .l{margin-top:10px;font-weight:600;font-size:15px;line-height:1.35}
+.kpi .h{margin-top:6px;font-size:13px;color:var(--muted)}
+.kpi.filled{border-style:solid}
+.kpi.filled .v{color:var(--accent)}
+
+.done{padding-top:64px}
+.done > h2{font-size:clamp(26px,3vw,34px);font-weight:800;border-bottom:1.5px solid var(--ink);padding-bottom:10px}
+.block{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:40px;padding-block:36px;border-bottom:1px solid var(--line)}
+.block h3{color:var(--ink);font-family:var(--display);font-size:clamp(24px,2.6vw,30px);font-weight:800;letter-spacing:-0.015em;text-transform:none;margin-bottom:12px}
+.block .txt p{color:var(--muted);max-width:72ch}
+.block.wide .txt p{max-width:96ch}
+.block .txt p+p{margin-top:10px}
+.sec-result{display:inline-flex;align-items:baseline;gap:10px;margin-top:16px;padding:8px 14px;border-radius:999px;background:color-mix(in srgb,var(--brand) 12%,var(--surface));color:var(--ink);font-weight:700}
+.block .txt p.sec-result{color:var(--ink);max-width:none}
+.sec-result .mono{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);font-weight:500}
+.block .txt .take{margin-top:16px;color:var(--ink);font-weight:600}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.links a{font-weight:600;font-size:15px;text-decoration:none;border-bottom:1.5px solid var(--accent);padding-bottom:2px}
+.tiles{display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));gap:12px;align-content:start;align-items:start}
+.block.narrow .tiles{max-width:420px}
+.media{display:block;position:relative;width:100%;max-width:100%;padding:0;border:0;border-radius:6px;overflow:hidden;background:var(--surface);box-shadow:0 1px 2px rgba(54,53,58,.08),0 6px 18px rgba(54,53,58,.10)}
+.media.wide{grid-column:1 / -1}
+.media img,.media video{display:block;width:100%;height:100%;object-fit:cover}
+.media video{background:#000}
+button.shot{cursor:zoom-in;font:inherit;color:inherit}
+@media (prefers-reduced-motion:no-preference){.shot img{transition:transform .35s ease}.shot:hover img{transform:scale(1.03)}}
+.go-ext{position:absolute;right:10px;bottom:10px;background:var(--head);color:var(--head-ink);font-weight:700;font-size:14px;padding:8px 12px;border-radius:999px}
+.note{display:flex;flex-direction:column;justify-content:center;gap:8px;aspect-ratio:1/1;padding:20px;background:var(--brand);color:#fff}
+.note-big{font-family:var(--display);font-weight:800;font-size:clamp(44px,5vw,64px);line-height:1}
+.note-small{font-weight:600;line-height:1.3}
+.news{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px;margin-top:24px;align-items:center}
+.mail{border-radius:10px;overflow:hidden;background:#fff;color:#1d1d22;box-shadow:0 2px 4px rgba(54,53,58,.08),0 18px 40px rgba(54,53,58,.16)}
+.mail-bar{display:flex;gap:6px;padding:12px 14px;background:var(--brand)}
+.mail-bar i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.55)}
+.mail-meta{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;padding:18px 24px;border-bottom:1px solid #e6e6ea;font-size:15px}
+.mail-meta .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#7a7a85;padding-top:3px}
+.mail-meta strong{font-family:var(--display);font-size:clamp(18px,2vw,22px);line-height:1.2}
+.mail-body{padding:22px 24px 26px;font-size:16px;line-height:1.55}
+.mail-intro{color:#3a3a42}
+.mail-prog{margin-top:16px;font-weight:700}
+.mail-body ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.mail-body li{padding:10px 14px;border-left:3px solid var(--brand);background:#f4f5fb;border-radius:0 6px 6px 0}
+.mail-end{margin-top:16px;color:#3a3a42}
+.mail-links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px}
+.mail-links .mail-see{margin-top:0}
+.mail-links button.mail-see{color:var(--brand);font:inherit;font-weight:700;cursor:pointer}
+.mail-see{margin-top:18px;background:none;border:0;padding:0;color:var(--brand);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.news-points{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.news-points li,.doc-steps li{padding:18px;border-radius:6px;background:var(--surface);border:1px solid var(--line)}
+.news-points .mono,.doc-steps .mono{color:var(--accent);font-size:12px}
+.news-points b,.doc-steps b{display:block;margin-top:6px;font-family:var(--display);font-size:19px}
+.news-points p,.doc-steps p{margin-top:4px;color:var(--muted);font-size:15px;line-height:1.45}
+.doc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px 48px;align-items:center;padding:clamp(24px,4vw,48px);border-radius:10px;background:color-mix(in srgb,var(--brand) 10%,var(--surface))}
+.doc-txt p{color:var(--muted);max-width:62ch;margin-top:10px}
+.doc-txt .take{color:var(--ink);font-weight:600}
+.doc-cover{justify-self:center;width:min(100%,380px);padding:0;border:0;background:none;border-radius:4px;box-shadow:8px 8px 0 -1px color-mix(in srgb,var(--brand) 35%,var(--surface)),16px 16px 0 -2px color-mix(in srgb,var(--brand) 20%,var(--surface)),0 20px 40px rgba(54,53,58,.2);transform:rotate(-2deg)}
+.doc-cover img{display:block;width:100%;height:auto;border-radius:4px}
+.doc-steps{grid-column:1 / -1;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.block.also{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);align-items:baseline}
+.li-posts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px;align-items:start}
+.li-post{background:#fff;color:#1d1d22;border-radius:10px;border:1px solid #e3e3e8;overflow:hidden;box-shadow:0 6px 18px rgba(54,53,58,.08)}
+.li-head{display:flex;gap:10px;align-items:center;padding:14px 16px 6px}
+.li-head b{display:block;font-size:15px}
+.li-head small{color:#6b6b75;font-size:12.5px}
+.li-logo{width:40px;height:40px;border-radius:8px;display:grid;place-items:center;background:var(--brand);color:#fff;font-family:var(--display);font-weight:800;font-size:20px}
+.li-body{padding:4px 16px 0;font-size:15px;line-height:1.5;max-height:9.2em;overflow:hidden;position:relative}
+.li-body p+p{margin-top:10px}
+.li-post.open .li-body{max-height:none}
+.li-more{display:block;margin:6px 16px 12px auto;background:none;border:0;color:#5b5b66;font-weight:600;cursor:pointer;font-size:14px}
+.li-img{display:block;width:100%;padding:0;border:0;background:none}
+.li-img img{display:block;width:100%;height:auto}
+@media (max-width:860px){.li-posts{grid-template-columns:1fr}}
+.media.vid.tall{grid-row:span 2;align-self:stretch}
+.note.span3{grid-column:span 3;aspect-ratio:auto;align-self:stretch;justify-content:center;padding:24px 28px}
+.note.span3 .note-big{font-size:clamp(64px,8vw,112px)}
+.note.span3 .note-small{font-size:clamp(17px,1.6vw,22px)}
+.note.span2{grid-column:span 2;aspect-ratio:auto;align-self:stretch;justify-content:flex-end;padding:28px}
+.web{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:24px;margin-top:24px;align-items:start}
+.web figure{margin:0;min-width:0}
+.web figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font-size:14px;color:var(--muted)}
+.web figcaption a{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.browser{border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 2px 4px rgba(54,53,58,.08),0 18px 40px rgba(54,53,58,.16)}
+.browser-bar{display:flex;align-items:center;gap:12px;padding:10px 14px;background:#ececf0;border-bottom:1px solid #dcdce2}
+.browser-bar .dots{display:flex;gap:6px}
+.browser-bar .dots i{width:10px;height:10px;border-radius:50%;background:#c9c9d0}
+.browser-url{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:5px 12px;border-radius:6px;background:#fff;color:#4a4a55;font-size:13px;text-decoration:none}
+.browser-url span{margin-left:6px;color:var(--brand)}
+.browser-view{height:clamp(320px,38vw,470px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.browser-view img{display:block;width:100%;height:auto}
+.web-points{align-self:center;margin-top:-28px}
+.illus{margin:0;align-self:center;grid-column:1 / -1;width:100%;max-width:470px;justify-self:end}
+@media (max-width:700px){.illus{max-width:none;justify-self:stretch}}
+.n8n{display:block;width:100%;height:auto;font-family:var(--body)}
+.n8n .nd rect{fill:var(--surface);stroke:var(--line);stroke-width:1.5;filter:drop-shadow(0 4px 10px rgba(54,53,58,.10))}
+.n8n .port{fill:var(--surface);stroke:#9a96a0;stroke-width:1.5}
+.n8n .ln path,.n8n path.ln{fill:none;stroke:#9a96a0;stroke-width:2}
+.n8n path.back{stroke-dasharray:5 5;stroke:var(--accent)}
+.n8n .ah{fill:#9a96a0}
+.n8n .ic rect,.n8n .ic path{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.n8n .t1{fill:var(--ink);font-size:15px;font-weight:700}
+.n8n .t2{fill:var(--muted);font-size:12.5px}
+.n8n .t3{fill:var(--muted);font-family:var(--mono);font-size:11.5px}
+.illus figcaption{margin-top:8px;font-size:13px;color:var(--muted);text-align:center}
+.car{min-width:0}
+.car-track{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:6px}
+.car-track::-webkit-scrollbar{display:none}
+.car-slide{flex:0 0 100%;scroll-snap-align:start;aspect-ratio:var(--r);padding:0;border:0;border-radius:6px;overflow:hidden;background:var(--surface);cursor:zoom-in}
+.car-slide img,.car-slide video{display:block;width:100%;height:100%;object-fit:cover}
+.car.single .car-nav{visibility:hidden}
+.car-nav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:12px}
+.car-btn{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;color:var(--ink);font-size:18px;cursor:pointer}
+.car-btn:hover{background:var(--head);color:var(--head-ink);border-color:var(--head)}
+.car-btn:disabled{opacity:.3;cursor:default;background:transparent;color:var(--ink);border-color:var(--ink)}
+.car-count{font-family:var(--mono);font-size:13px;color:var(--muted);min-width:48px;text-align:center;font-variant-numeric:tabular-nums}
+.cars{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.car-title{font-weight:700;margin-bottom:10px}
+.bigidea{margin-top:48px;padding:36px clamp(20px,4vw,48px);border-radius:8px;background:var(--head);color:var(--head-ink)}
+.bigidea .mono{color:var(--accent)}
+.bigidea .bi-t{margin-top:10px;font-family:var(--display);font-weight:800;font-size:clamp(32px,5vw,60px);line-height:1.02;letter-spacing:-0.02em;text-wrap:balance}
+.bigidea .bi-s{margin-top:14px;opacity:.8;max-width:60ch}
+.lightbox{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:rgba(20,19,23,.88);padding:max(20px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(20px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lightbox[hidden],.lightbox [hidden]{display:none!important}
+.lightbox.long{overflow-y:auto;place-items:start center;overscroll-behavior:contain}
+.lightbox.long img{max-height:none;width:min(92vw,646px);max-width:none;margin-block:24px}
+.lightbox.long .lb-close{position:fixed;background:rgba(20,19,23,.7)}
+.lightbox img{max-width:min(92vw,1100px);max-height:86vh;width:auto;height:auto;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lightbox video{height:86vh;width:auto;max-width:92vw;object-fit:contain;background:#000;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.media.vid{position:relative}
+.vid-expand{position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(20,19,23,.62);color:#fff;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(4px)}
+.vid-expand:hover{background:var(--accent)}
+.vid-expand svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+video:fullscreen{object-fit:contain!important;background:#000}
+video:-webkit-full-screen{object-fit:contain!important;background:#000}
+.lightbox .lb-close{position:absolute;top:max(16px,env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));width:44px;height:44px;border-radius:50%;border:1.5px solid #fff;background:transparent;color:#fff;font-size:20px;cursor:pointer}
+.tile{aspect-ratio:4/5;max-width:100%;border-radius:5px;background:color-mix(in srgb,var(--brand) 20%,var(--surface));position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:14px;color:var(--ink)}
+.tile.wide{grid-column:1 / -1}
+.tile::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 14px,color-mix(in srgb,var(--brand) 22%,transparent) 14px 15px)}
+.tile > *{position:relative}
+.tile .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
+.tile .t{font-family:var(--display);font-weight:600;font-size:17px;line-height:1.15}
+
+.block.wide{grid-template-columns:minmax(0,1fr)}
+.logowall{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:22px}
+.logo-card{background:#fff;border-radius:8px;box-shadow:0 1px 2px rgba(54,53,58,.08),0 6px 18px rgba(54,53,58,.10);padding:22px 16px 14px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.logo-card .lg{height:78px;width:100%;display:grid;place-items:center}
+.logo-card img{max-height:78px;max-width:88%;width:auto;height:auto;object-fit:contain}
+.logo-card span{font-size:13px;color:#6B655F;text-align:center;line-height:1.3}
+@media (max-width:860px){.logowall{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:520px){.logowall{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.brandwall{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:20px}
+.brandwall span{display:flex;align-items:center;justify-content:center;text-align:center;min-height:110px;padding:16px;border-radius:6px;font-family:var(--display);font-weight:800;font-size:23px;letter-spacing:-0.01em;word-spacing:-0.05em;line-height:1.05}
+.brandwall span:nth-child(5n+1){background:var(--accent);color:var(--accent-ink)}
+.brandwall span:nth-child(5n+2){background:var(--head);color:var(--head-ink)}
+.brandwall span:nth-child(5n+3){background:var(--surface);color:var(--ink);border:1.5px solid var(--ink)}
+.brandwall span:nth-child(5n+4){background:color-mix(in srgb,var(--accent) 22%,var(--surface));color:var(--ink)}
+.brandwall span:nth-child(5n+5){background:var(--line);color:var(--ink)}
+.flow{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;counter-reset:st}
+.flow li{position:relative;padding:18px 18px 20px;border-radius:6px;background:var(--surface);border:1px solid var(--line);min-width:0}
+.flow li .top-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.flow li .ic{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 16%,var(--surface));color:var(--accent)}
+.flow li .ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.flow li .n{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.06em}
+.flow li b{display:block;margin-top:14px;font-family:var(--display);font-size:19px;line-height:1.15}
+.flow li p{margin-top:6px;font-size:15px;color:var(--muted);line-height:1.45}
+.subs{padding-top:48px}
+.subs > h2{font-size:clamp(26px,3vw,34px);font-weight:800;border-bottom:1.5px solid var(--ink);padding-bottom:10px}
+.subcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:20px}
+.subcard{display:flex;flex-direction:column;gap:14px;min-height:220px;padding:26px;border-radius:8px;text-decoration:none;background:var(--brand);color:var(--brand-fg);position:relative}
+.subcard .folder{width:52px;height:42px}
+.subcard .folder .front{fill:color-mix(in srgb,var(--brand) 70%,#fff)}
+.subcard .folder .back{fill:color-mix(in srgb,var(--brand) 85%,#000)}
+.subcard strong{font-family:var(--display);font-size:clamp(30px,3.6vw,42px);font-weight:800;letter-spacing:-0.02em;line-height:1}
+.subcard p{opacity:.85;max-width:40ch}
+.subcard .go{margin-top:auto;display:inline-flex;align-self:flex-start;gap:8px;font-weight:700;padding:10px 16px;border-radius:999px;border:1.5px solid currentColor}
+.subcard:hover .go{background:var(--brand-fg);color:var(--brand)}
+@media (prefers-reduced-motion:no-preference){.subcard{transition:transform .2s ease}.subcard:hover{transform:translateY(-3px)}.subcard .go{transition:background-color .2s ease,color .2s ease}}
+.picker li.sub a{padding-left:34px}
+.picker{margin-top:64px;border-top:1.5px solid var(--ink)}
+.picker summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:26px 0}
+.picker summary::-webkit-details-marker{display:none}
+.picker summary .mono{color:var(--muted);display:block}
+.picker summary strong{font-family:var(--display);font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-0.02em;display:block;line-height:1.05}
+.picker .chev{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;flex:none;font-size:20px}
+@media (prefers-reduced-motion:no-preference){.picker .chev{transition:transform .25s ease}}
+.picker[open] .chev{transform:rotate(180deg)}
+.picker ul{list-style:none;margin:0 0 8px;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px}
+.picker li a{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:6px;border:1px solid var(--line);background:var(--surface);text-decoration:none;font-weight:600}
+.picker li a .folder{width:30px;height:24px}
+.picker li a:hover{background:var(--head);color:var(--head-ink);border-color:var(--head)}
+.picker li a[aria-current="page"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.picker li a small{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.picker li a:hover small{color:inherit}
+
+/* À propos */
+.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;padding-block:56px}
+.about img{width:100%;max-width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 90px)}
+.about h1{font-size:clamp(40px,6vw,76px);font-weight:800}
+.about .big{margin-top:24px;font-family:var(--display);font-size:clamp(22px,2.5vw,28px);font-weight:600;line-height:1.3;letter-spacing:-0.01em}
+.about .prose{margin-top:28px;max-width:62ch}
+.about .prose p{margin-top:14px;color:var(--muted)}
+.about .prose h2{margin-top:36px;font-size:24px;font-weight:800}
+.about .prose ul{margin:14px 0 0;padding-left:20px;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:44px;padding-top:28px;border-top:1.5px solid var(--ink)}
+.facts h3{font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.facts ol,.facts ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.facts li{line-height:1.4}
+.facts li small{display:block;color:var(--muted);font-size:14px}
+.tools{display:flex;flex-wrap:wrap;gap:6px}
+.tools span{font-size:14px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+
+/* Contact */
+.contact{margin-top:96px;background:var(--head);color:var(--head-ink)}
+.contact .wrap{padding-block:72px 40px}
+.contact h2{font-size:clamp(44px,8vw,104px);font-weight:800}
+.contact h2 em{font-style:normal;color:var(--accent)}
+.contact p.l{margin-top:18px;max-width:52ch;opacity:.8}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:40px}
+.cbox{border:1px solid color-mix(in srgb,var(--head-ink) 25%,transparent);border-radius:6px;padding:20px;min-width:0}
+.cbox .mono{opacity:.65;font-size:11.5px}
+.cbox .val{margin-top:8px;font-family:var(--display);font-size:22px;font-weight:600;word-break:break-all;user-select:all}
+.cbox .act{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.cbox button,.cbox a.act-btn{font:600 14px/1 var(--body);padding:10px 14px;border-radius:999px;border:1px solid var(--head-ink);background:transparent;color:var(--head-ink);cursor:pointer;text-decoration:none}
+.cbox button.ok{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:56px;padding-top:20px;border-top:1px solid color-mix(in srgb,var(--head-ink) 20%,transparent);opacity:.6;font-size:14px}
+
+/* Mobile */
+@media (max-width:860px){
+  .hero .wrap{padding-block:44px 44px}
+  .brief,.block,.about{grid-template-columns:1fr;gap:28px}
+  .about img{position:static;max-width:360px}
+  .row a{grid-template-columns:minmax(0,1fr) 24px;gap:6px 12px;padding:22px 14px}
+  .folder{width:34px;height:27px}
+  .row .yr{grid-column:1;order:-1}
+  .row .nm{grid-column:1}
+  .row .meta{grid-column:1}
+  .row .arr{grid-row:1 / span 3;grid-column:2;align-self:center}
+}
+@media (max-width:860px){
+  .news,.doc,.web,.web-points{grid-template-columns:1fr}
+  .web-points{margin-top:0}
+  .doc-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .cars{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+}
+@media (max-width:700px){
+  .tiles{--n:2 !important;max-width:100% !important}
+  .tiles.row{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  .tiles.row > :first-child{grid-column:1 / -1}
+  .note.span3{grid-column:span 1;aspect-ratio:1/1}
+  .note.span3 .note-big{font-size:44px}.note.span3 .note-small{font-size:15px}
+  .block.wide .tiles{--n:2 !important}
+}
+@media (max-width:520px){
+  .cars{grid-template-columns:1fr !important}
+  body{font-size:16px}
+  .polaroid img{width:128px;height:160px}
+  .hero-title{gap:22px}
+  .facts{grid-template-columns:1fr}
+  .tiles{gap:8px}
+  .tile .t{font-size:15px}
+  .nav a{padding:6px 8px;font-size:13.5px}
+  .top .wrap{gap:8px}
+  .brand{font-size:18px}
+}
+</style>
+
+<div class="draft" id="draft" hidden>
+  <div class="wrap"><b>Version de travail</b><span>Les cadres en pointillés attendent tes chiffres, les cadres hachurés tes visuels.</span></div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#accueil">Sarah Dkhissi<span>.</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#accueil" data-nav="accueil">Projets</a>
+      <a href="#a-propos" data-nav="a-propos">À propos</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <h2>On fait <em>équipe</em> ?</h2>
+    <p class="l">Une expertise à rendre visible, un produit à faire découvrir, une communauté à construire : parlons-en.</p>
+    <div class="contact-grid">
+      <div class="cbox">
+        <span class="mono">E-mail</span>
+        <div class="val" id="mail">sarah.dkhissi2@gmail.com</div>
+        <div class="act">
+          <button type="button" id="copyMail">Copier l'adresse</button>
+          <a class="act-btn" href="mailto:sarah.dkhissi2@gmail.com">Écrire</a>
+        </div>
+      </div>
+      <div class="cbox">
+        <span class="mono">LinkedIn</span>
+        <div class="val">in/sarah-dkhissi</div>
+        <div class="act">
+          <a class="act-btn" href="https://www.linkedin.com/in/sarah-dkhissi/" target="_blank" rel="noopener">Voir mon profil</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Sarah Dkhissi · Marketing &amp; communication · Toulouse</span>
+      <span>Anglais C1 · Espagnol C1</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   CONTENU DU SITE
+   Pour ajouter un chiffre : remplir "value" dans metrics.
+   Pour ajouter un visuel : remplacer un libellé de "visuals"
+   par un objet { src: "images/fichier.jpg", alt: "..." }.
+   ============================================================ */
+const DRAFT = true;
+const PHOTO = "assets/photo.webp";
+const AVATAR = "assets/avatar.webp";
+const N8N_SVG = `<svg viewBox="0 0 680 370" role="img" aria-labelledby="n8nT" class="n8n">
+<title id="n8nT">Schéma d'un workflow n8n : Notion déclenche un agent SEO puis un agent LinkedIn, un agent vérificateur contrôle les contenus, renvoie ce qui est à revoir et envoie le reste sur Slack pour validation.</title>
+<defs><marker id="n8nA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="ah"/></marker></defs>
+<g class="ln" marker-end="url(#n8nA)">
+<path d="M106 113H139"/>
+<path d="M335 113H379"/>
+<path d="M575 113H620Q640 113 640 133V178Q640 198 620 198H140Q120 198 120 218V258Q120 278 140 278H164"/>
+<path d="M370 278H444"/>
+</g>
+<path d="M270 236V170" class="ln back" marker-end="url(#n8nA)"/>
+<text x="278" y="222" class="t3">À revoir</text>
+<text x="384" y="268" class="t3">Validé</text>
+<g class="nd"><rect x="20" y="70" width="86" height="86" rx="12"/></g>
+<g class="ic"><rect x="40" y="94" width="30" height="38" rx="4"/><path d="M47 106h16M47 114h16M47 122h10"/></g>
+<text x="63" y="176" class="t1" text-anchor="middle">Notion</text><text x="63" y="193" class="t2" text-anchor="middle">Calendrier éditorial</text>
+<circle cx="20" cy="113" r="5" class="port"/><circle cx="106" cy="113" r="5" class="port"/>
+<path d="M34 79l-6 10h5l-3 9 8-12h-5l3-7z" fill="#1A2BF0"/>
+<g class="nd"><rect x="145" y="70" width="190" height="86" rx="12"/></g>
+<circle cx="175" cy="113" r="17" fill="#1A2BF0" opacity=".12"/>
+<g fill="#1A2BF0"><polygon points="175.0,102.0 177.9,110.1 186.0,113.0 177.9,115.9 175.0,124.0 172.1,115.9 164.0,113.0 172.1,110.1"/><polygon points="186.0,99.0 187.0,102.0 190.0,103.0 187.0,104.0 186.0,107.0 185.0,104.0 182.0,103.0 185.0,102.0"/></g>
+<text x="201" y="110" class="t1">Agent SEO</text><text x="201" y="128" class="t2">Rédige l'article</text>
+<circle cx="145" cy="113" r="5" class="port"/><circle cx="335" cy="113" r="5" class="port"/>
+<g class="nd"><rect x="385" y="70" width="190" height="86" rx="12"/></g>
+<circle cx="415" cy="113" r="17" fill="#1A2BF0" opacity=".12"/>
+<g fill="#1A2BF0"><polygon points="415.0,102.0 417.9,110.1 426.0,113.0 417.9,115.9 415.0,124.0 412.1,115.9 404.0,113.0 412.1,110.1"/><polygon points="426.0,99.0 427.0,102.0 430.0,103.0 427.0,104.0 426.0,107.0 425.0,104.0 422.0,103.0 425.0,102.0"/></g>
+<text x="441" y="110" class="t1">Agent LinkedIn</text><text x="441" y="128" class="t2">Décline en posts</text>
+<circle cx="385" cy="113" r="5" class="port"/><circle cx="575" cy="113" r="5" class="port"/>
+<g class="nd"><rect x="170" y="235" width="200" height="86" rx="12"/></g>
+<circle cx="200" cy="278" r="17" fill="#1A2BF0" opacity=".12"/>
+<g fill="#1A2BF0"><polygon points="200.0,267.0 202.9,275.1 211.0,278.0 202.9,280.9 200.0,289.0 197.1,280.9 189.0,278.0 197.1,275.1"/><polygon points="211.0,264.0 212.0,267.0 215.0,268.0 212.0,269.0 211.0,272.0 210.0,269.0 207.0,268.0 210.0,267.0"/></g>
+<text x="226" y="275" class="t1">Agent vérificateur</text><text x="226" y="293" class="t2">Relit et contrôle</text>
+<circle cx="170" cy="278" r="5" class="port"/><circle cx="370" cy="278" r="5" class="port"/>
+<g class="nd"><rect x="450" y="235" width="86" height="86" rx="12"/></g>
+<g class="ic"><path d="M475 255h32a6 6 0 0 1 6 6v18a6 6 0 0 1-6 6h-20l-9 8v-8h-3a6 6 0 0 1-6-6v-18a6 6 0 0 1 6-6z"/><path d="M482 266h18M482 274h11"/></g>
+<text x="493" y="341" class="t1" text-anchor="middle">Slack</text><text x="493" y="358" class="t2" text-anchor="middle">Validation équipe</text>
+<circle cx="450" cy="278" r="5" class="port"/><circle cx="536" cy="278" r="5" class="port"/>
+</svg>`;
+const DIMS = {"come2ci_inta":[1200,960],"reac_newsletter_full":[646,4838],"reac_reactors":[540,960],"reac_offre_ia":[800,2838],"coco_q_1":[1080,1350],"coco_q_2":[1080,1350],"coco_q_3":[1080,1350],"coco_q_4":[1080,1350],"coco_q_5":[1080,1350],"coco_q_6":[1080,1350],"coco_val_1":[1080,1350],"coco_val_2":[1080,1350],"coco_stimule":[1080,1350],"coco_fr_1":[1080,1350],"coco_fr_2":[1080,1350],"coco_fr_3":[1080,1350],"coco_fr_4":[1080,1350],"coco_fr_5":[1080,1350],"yoga_guatemala":[1000,1266],"yoga_live":[1000,1254],"coco_q_cover":[720,900],"yoga_reel":[540,960],"coco_c5_1":[1080,1350],"coco_c5_2":[1080,1350],"coco_c5_3":[1080,1350],"coco_c5_4":[1080,1350],"pompon_v1":[540,960],"pompon_v2":[540,966],"pompon_v3":[540,960],"pompon_v4":[540,960],"sopt_26":[1080,1080],"sopt_30sec":[1080,1080],"sopt_pennylane":[1080,1080],"sopt_boost_personnes":[1080,1080],"sopt_boost_orchestre":[1080,1080],"sopt_car_1":[1080,1080],"sopt_car_2":[1080,1080],"sopt_car_3":[1080,1080],"sopt_car_4":[1080,1080],"sopt_car_5":[1080,1080],"sopt_car_6":[1080,1080],"sopt_video":[720,720],"sopt_txt_pennylane":[800,800],"sopt_txt_26":[800,800],"sopt_meme_spider":[792,792],"sopt_iceberg":[792,792],"sopt_meme_regret":[792,792],"sopt_quote_outil":[792,792],"sopt_quote_croissance":[792,792],"sopt_meme_onboarding":[792,792],"sopt_boost_affiche":[792,792],"sopt_boost_schema":[796,770],"sopt_boost_laptop":[792,792],"reac_newsletter_screen":[900,854],"reac_newsletter":[1200,675],"reac_podcast_page":[1200,675],"reac_mkia":[1200,800],"reac_meetup":[800,800],"reac_apero":[800,800],"reac_post_valeur":[800,800],"reac_post_80":[800,800],"reac_post_academy":[800,800],"reac_ia_aiact_etapes":[800,800],"reac_ia_aiact":[800,800],"reac_ia_quote":[800,800],"reac_rex":[800,800],"sopt_26":[1080,1080],"sopt_30sec":[1080,1080],"sopt_pennylane":[1080,1080],"sopt_boost_personnes":[1080,1080],"sopt_boost_orchestre":[1080,1080],"sopt_car_1":[1080,1080],"sopt_car_2":[1080,1080],"sopt_car_3":[1080,1080],"sopt_car_4":[1080,1080],"sopt_car_5":[1080,1080],"sopt_car_6":[1080,1080],"coco_c1_1":[1080,1350],"coco_c1_2":[1080,1350],"coco_c1_3":[1080,1350],"coco_c1_4":[1080,1350],"coco_c1_5":[1080,1350],"coco_c1_6":[1080,1350],"coco_c2_1":[1080,1350],"coco_c2_2":[1080,1350],"coco_c2_3":[1080,1350],"coco_c2_4":[1080,1350],"coco_c2_5":[1080,1350],"coco_c3_1":[1080,1350],"coco_c3_2":[1080,1350],"coco_c3_3":[1080,1350],"coco_c3_4":[1080,1350],"coco_c3_5":[1080,1350],"coco_c3_6":[1080,1350],"coco_c3_7":[1080,1350],"coco_c4_1":[1080,1350],"coco_c4_2":[1080,1350],"coco_c4_3":[1080,1350],"coco_c4_4":[1080,1350],"coco_c4_5":[1080,1350],"coco_c4_6":[1080,1350],"coco_c4_7":[1080,1350],"coco_c4_8":[1080,1350],"coco_cover_glow":[1080,1350],"coco_cover_cellulite":[1080,1350],"coco_cover_fraise":[1080,1350],"coco_japonaise":[1080,1350],"lutti_1":[800,448],"lutti_9":[800,448],"lutti_17":[800,448],"lutti_18":[800,448],"lutti_29":[800,448],"bud_1":[800,448],"bud_7":[800,448],"bud_10":[800,448],"bud_13":[800,448],"bud_26":[800,448],"seo":[744,611],"podcast":[800,698],"come2ci_1":[800,800],"come2ci_2":[800,800],"come2ci_3":[800,800],"come2ci_4":[800,800],"photo":[520,694],"avatar":[320,400],"reac_site":[720,720],"reac_podcast_clip":[720,406],"sopt_video":[720,720],"coco_tt_jeanne":[540,960],"coco_tt_1":[540,960],"coco_tt_2":[540,960],"coco_tt_3":[540,960]};
+
+const DISCIPLINES = ["Stratégie","Contenus","Personal branding","Réseaux sociaux","Événementiel","Newsletter","SEO","Ads & site web","Podcast","IA"];
+
+const PROJECTS = [
+  {
+    id:"reacteev", logo:{file:"logo_reacteev_rond",shape:"round"}, group:"client", name:"Reacteev", brand:{bg:"#1A2BF0",fg:"#FFFFFF"}, year:"2025",
+    role:"Chargée de marketing & communication, puis freelance",
+    sector:"Cabinet de conseil premium spécialisé en agilité : 30 consultants experts au service des entreprises du CAC 40, engagé en 2025 dans une transition stratégique vers l'IA.",
+    eyebrow:"Stage de fin d'études · Janvier – juillet 2025 · Paris",
+    disciplines:["Stratégie","Contenus","Réseaux sociaux","Événementiel","Newsletter","SEO","Podcast","IA"],
+    tags:["Stratégie","LinkedIn","Newsletter","SEO","Site web","Vidéo","Événementiel","Support aux sales"],
+    context:[
+      "Chargée de marketing et communication, j'ai accompagné Reacteev dans son virage vers l'IA : nouveau ciblage, stratégie de communication, contenus, site web, salons et soutien aux équipes commerciales.",
+      "Au bout de deux mois, j'étais seule en charge du marketing et de la communication du cabinet."
+    ],
+    highlightLabel:"La suite avec Reacteev", highlight:"Reacteev est devenu mon client en 2026 : en freelance, j'ai pris en charge sa page LinkedIn et les profils de trois collaborateurs.",
+    challenge:"Rendre des sujets experts (agilité à l'échelle, IA agentique) clairs, vivants et attractifs pour des décideurs.",
+    metrics:[
+      {label:"Leads qualifiés générés par le REX", value:"3 MQL", detail:"retour d'expérience SAFe Summit"},
+      {label:"Posts LinkedIn produits", value:"20", detail:"avec l'AI Content Factory"},
+      {label:"Articles SEO produits", value:"2", detail:"avec l'AI Content Factory"}
+    ],
+    sections:[
+      {kind:"flow", numLabel:"Axe", title:"Mon rôle en 4 axes", text:["Une mission à 360°, de la stratégie jusqu'au soutien des commerciaux."], steps:[
+        {t:"Stratégie", ic:"trend", d:"Accompagner le nouvel horizon IA du cabinet, définir un nouveau ciblage et construire la stratégie de communication et le calendrier éditorial."},
+        {t:"Communication et visibilité", ic:"chat", d:"Community management, articles SEO, newsletters, création de vidéos et montages, organisation et suivi des salons professionnels."},
+        {t:"Site web et digital", ic:"send", d:"Conception et mise en ligne de nouvelles pages, optimisation du site."},
+        {t:"Support aux sales", ic:"user", d:"Génération et qualification des leads, soutien direct aux équipes commerciales."}
+      ]},
+      {title:"Création de contenu LinkedIn", text:["J'ai créé les visuels LinkedIn de Reacteev en suivant le calendrier éditorial, à raison d'environ un post par jour : contenus experts sur l'IA et l'agilité, chiffres clés, offres de formation et actualités du cabinet."], take:"Objectif : installer Reacteev comme une voix crédible auprès de décideurs de grands groupes.", layout:"wide", cols:4, visuals:[{video:"reac_reactors", tall:true},{img:"reac_ia_aiact_etapes"},{img:"reac_post_valeur"},{img:"reac_post_80"},{img:"reac_ia_quote"},{img:"reac_post_academy"},{img:"reac_ia_aiact"}]},
+      {title:"AI Content Factory", text:["Dans le cadre du virage IA du cabinet, j\'ai participé à la création d\'une AI Content Factory : une chaîne de production de contenus automatisée par des agents IA.","En parallèle, j\'ai mené une veille sur les usages de l\'IA pour nourrir les réflexions et les contenus du cabinet."], take:"Un projet concret d'IA agentique appliquée à la production de contenus marketing.", cols:1, visuals:[{svg:"n8n"}]},
+      {title:"Salons et événements", text:["J'ai organisé la participation de l'équipe au Salon MKIA, de la préparation à la communication autour de l'événement. J'ai aussi monté un meetup pour réunir la communauté, et un apéro commercial après le SAFe Summit pour échanger avec des prospects ciblés."], take:"Trois formats, un même objectif : transformer des rencontres en opportunités commerciales.", layout:"wide", row:true, visuals:[{img:"reac_mkia", alt:"L'équipe Reacteev au Salon MKIA"},{img:"reac_meetup", alt:"Meetup Reacteev"},{img:"reac_apero", alt:"Apéro commercial après le SAFe Summit"}]},
+      {kind:"newsletter", title:"Newsletter « Reacteev News »", text:["J'ai conçu et rédigé les newsletters, de la ligne éditoriale à l'envoi sur Mailjet. Chaque édition mettait en avant l'actualité du cabinet, ses expertises et ses événements, dans un format pensé pour une lecture rapide."],
+        edition:{date:"17 mars 2025", subject:"Des nouvelles stratégies pour gagner en performance", intro:"Dans un environnement économique exigeant, l'adaptabilité et l'excellence opérationnelle sont des impératifs pour rester compétitif.", items:["Les compétences stratégiques pour rester performant en 2025","Fluidifier la collaboration et maximiser l'agilité avec SAFe et Atlassian","Un podcast sur l'expérimentation et l'échec comme moteurs de réussite","Notre engagement RSE reconnu par EcoVadis"], img:"reac_newsletter_full", href:"https://www.linkedin.com/pulse/reacteev-news-des-nouvelles-strat%C3%A9gies-pour-gagner-en-performance-gxf7e/"},
+        points:[{t:"Ligne éditoriale", d:"Choix des sujets du mois à partir de l'actualité et des expertises du cabinet."},{t:"Rédaction et envoi", d:"Rédaction, mise en forme et envoi sur Mailjet."},{t:"Republication", d:"Chaque édition republiée sur LinkedIn pour prolonger sa portée."}]},
+      {title:"Podcast « Agile Is Not Enough »", text:["J'ai géré la mise en ligne du podcast sur les plateformes d'écoute, à raison d'un épisode toutes les deux semaines. Pour chacun, j'ai décliné l'épisode en plusieurs formats LinkedIn : visuels, extraits, citations d'invités."], take:"Un épisode, plusieurs contenus : prolonger chaque conversation d'experts bien au-delà de l'écoute.", layout:"wide", row:true, visuals:[{video:"reac_podcast_clip"},{img:"reac_podcast_page"}]},
+      {title:"Retour d'expérience SAFe Summit", text:["Après le SAFe Summit de Sorrento, j'ai imaginé et piloté un document de retour d'expérience avec les consultants présents : de la trame à la mise en page, puis sa diffusion sur les réseaux sociaux."], take:"Double objectif : générer des leads qualifiés et démontrer l'expertise SAFe du cabinet.", narrow:true, cols:1, visuals:[{img:"reac_rex", alt:"Couverture du récapitulatif SAFe Summit 2025"}]},
+      {kind:"web", title:"Site web et SEO", text:["J'ai fait évoluer le site de Reacteev en no code : mise à jour des pages existantes, création de nouvelles pages et travail main dans la main avec le développeur sur les pages offres."], take:"Objectif : un site aligné avec le virage IA du cabinet, clair pour des décideurs et bien référencé.",
+        page:{img:"reac_offre_ia", url:"reacteev.com/fr/offers/artificial-intelligence", href:"https://reacteev.com/fr/offers/artificial-intelligence/", caption:"Page offre Intelligence Artificielle"},
+        points:[{t:"Landing page MKIA", d:"Créée entièrement pour le salon MKIA : structure, contenus et mise en ligne en no code."},{t:"Pages offres", d:"Restructuration des pages offres avec le développeur : organisation des sections et wording."},{t:"Mises à jour et SEO", d:"Modifications du site en no code, optimisation et rédaction d'articles SEO."}]}
+    ]
+  },
+  {
+    id:"soptima", logo:{file:"logo_soptima_icone",shape:"round"}, group:"client", name:"Soptima", brand:{bg:"#071530",fg:"#FFFFFF"}, year:"2026",
+    role:"Personal branding des fondateurs et animation LinkedIn",
+    sector:"Cabinet de conseil tech, parti de la simplification du back-office des entreprises avant de se recentrer sur l'AI Cost Management.",
+    eyebrow:"Mission freelance · 2026",
+    disciplines:["Stratégie","Contenus","Personal branding","Réseaux sociaux"],
+    tags:["Personal branding","LinkedIn","Community management","Stratégie","Airtable"],
+    context:[
+      "J'ai accompagné les deux fondateurs en personal branding et animé leur présence sur LinkedIn, ainsi que la page de l'entreprise et celle de sa branche communication, Sopticom.",
+      "J'ai aussi contribué à relayer le changement de cap de l'entreprise dans sa communication."
+    ],
+    challenge:"Donner une voix aux fondateurs et rendre un sujet technique clair et crédible pour des décideurs.",
+    metrics:[
+      {label:"Impressions moyennes par post", hint:"Profils des fondateurs"},
+      {label:"Abonnés gagnés par les fondateurs", hint:"Avant / après la mission"},
+      {label:"Taux d'engagement moyen", hint:"Statistiques LinkedIn"},
+      {label:"Prises de contact entrantes", hint:"Si les fondateurs les suivent"}
+    ],
+    sections:[
+      {title:"Personal branding des deux fondateurs", text:["Définition de la ligne éditoriale de chaque fondateur, rédaction et publication de leurs posts LinkedIn, avec un suivi des contenus dans Airtable."], visuals:["Post fondateur","Post fondateur"]},
+      {kind:"posts", title:"Posts LinkedIn de la page Soptima", text:["Des posts qui partent d'un problème concret des PME (données dispersées, process manuels, outils qui ne se parlent pas) pour amener l'expertise de Soptima. Texte et visuel conçus ensemble."],
+        posts:[
+          {img:"sopt_pennylane", body:["Et si votre reporting était déjà obsolète au moment où vous le lisez ?","Une clôture mensuelle ou un reporting financier repose souvent sur la même chose : des données disponibles, mais dispersées.","Banque, comptabilité, Excel, outils métiers, CRM… chaque brique détient une partie de la vérité mais aucune ne la restitue de façon unifiée.","Résultat : les équipes financières passent encore du temps à consolider plutôt qu'à analyser.","Le problème, vient surtout de l'absence de continuité entre les systèmes.","Des solutions comme Pennylane permettent de remettre de la cohérence dans ces flux :","• unification des données comptables et financières\n• suivi de trésorerie en temps réel\n• diminution des tâches de rapprochement manuel\n• meilleure coordination entre direction financière et cabinet comptable","Chez Soptima, notre rôle est d'intégrer ces environnements pour qu'ils fonctionnent ensemble, sans rupture de flux. On déploie et connecte Pennylane au reste de votre système pour que la finance ne soit plus un exercice de consolidation, mais un outil de pilotage."]},
+          {img:"sopt_26", body:["Si vos données sont incomplètes, pourquoi votre IA ferait mieux ?","On parle beaucoup d'IA comme si elle allait corriger les limites des entreprises. En réalité, elle fait surtout une chose, accélérer ce qui existe déjà.","Des données propres, connectées et cohérentes → des décisions plus fiables.","Des données dispersées → des erreurs qui circulent plus vite.","Une étude IBM menée auprès de 1 700 Chief Data Officers illustre bien ce décalage : 81 % des organisations accélèrent leurs investissements en IA, mais seulement 26 % considèrent que leurs données sont réellement prêtes à soutenir de nouveaux usages créateurs de valeur.","Le sujet n'est donc pas « comment intégrer l'IA », mais plutôt : comment circulent vos données aujourd'hui ?","Dans beaucoup d'organisations, l'information vit dans plusieurs outils qui ne se parlent pas. Résultat : ressaisies, écarts, pertes de temps, décisions fragiles.","Chez Soptima, on part toujours de là : connecter les outils, fiabiliser les échanges, remettre de la continuité dans les processus financiers et opérationnels."]}
+        ],
+        grid:[{img:"sopt_30sec"},{img:"sopt_iceberg"},{img:"sopt_quote_outil"},{img:"sopt_quote_croissance"},{img:"sopt_meme_spider"},{img:"sopt_meme_regret"},{img:"sopt_meme_onboarding"},{video:"sopt_video"}]},
+      {kind:"carousel", title:"Carrousel « Combien coûte un process manuel ? »", text:["Un carrousel qui chiffre le temps perdu sur chaque tâche administrative (notes de frais, paie, relances, reporting) pour rendre concret l'intérêt de l'automatisation pour une PME."], slides:["sopt_car_1","sopt_car_2","sopt_car_3","sopt_car_4","sopt_car_5","sopt_car_6"]},
+      {title:"Boost Ambassadeur", text:["Posts page Boost Ambassadeur et page personnelle."], layout:"wide", cols:5, visuals:[{img:"sopt_boost_personnes"},{img:"sopt_boost_orchestre"},{img:"sopt_boost_affiche"},{img:"sopt_boost_schema"},{img:"sopt_boost_laptop"}]}
+    ]
+  },
+  {
+    id:"anvesana", logo:{file:"logo_anvesana_blanc",shape:"round"}, group:"client", name:"Anvesana", brand:{bg:"#C4502A",fg:"#FFFFFF"}, year:"2026",
+    role:"Bras droit marketing & communication de la fondatrice",
+    sector:"Deux marques portées par une solopreneuse : Anvesana Yoga et La Brosse Coco.",
+    eyebrow:"Mission freelance · 2026",
+    disciplines:["Stratégie","Contenus","Personal branding","Réseaux sociaux","Ads & site web"],
+    tags:["Stratégie","Benchmark","Personal branding","Réseaux sociaux","Ads","Site web","Prospection","Go High Level"],
+    context:[
+      "J'ai accompagné la fondatrice de A à Z sur ses deux marques : stratégie, benchmark et analyses de marché, personal branding, création de contenus et animation des réseaux sociaux.",
+      "J'ai également travaillé sur le site web et les campagnes publicitaires, et mené des actions de vente par téléphone (retraites de yoga, recettes) via Go High Level."
+    ],
+    challenge:"Deux marques, deux audiences, une seule ligne directrice : un positionnement cohérent, décliné sur chaque canal.",
+    subs:["anvesana-yoga","la-brosse-coco"],
+    metrics:[],
+    sections:[
+      {kind:"flow", title:"Mon rôle de bras droit", text:["Sur les deux marques, j'ai couvert toute la chaîne marketing, de la stratégie jusqu'à la vente."], plain:true, steps:[
+        {t:"Stratégie", ic:"trend", d:"Benchmark, analyses de marché et positionnement de chaque marque."},
+        {t:"Personal branding", ic:"user", d:"Mise en avant de la fondatrice et de son histoire."},
+        {t:"Contenus et réseaux sociaux", ic:"story", d:"Création des contenus et animation des communautés."},
+        {t:"Site web et publicité", ic:"send", d:"Travail sur le site et les campagnes publicitaires."},
+        {t:"Vente", ic:"chat", d:"Vente par téléphone des retraites et des recettes via Go High Level."}
+      ]}
+    ]
+  },
+  {
+    id:"colorz", logo:{file:"logo_colorz",shape:"round"}, group:"client", name:"Colorz", brand:{bg:"#02010F",fg:"#FFFFFF"}, year:"2026",
+    role:"Community management de marques grand public",
+    sector:"Agence de communication. J'y ai géré le community management de plusieurs marques grand public.",
+    eyebrow:"Mission freelance · 2026",
+    disciplines:["Contenus","Réseaux sociaux"],
+    tags:["Community management","Calendrier éditorial","Rédaction de légendes","Stories","Modération","Sourcing UGC","Veille trends"],
+    context:["Pour l'agence Colorz, j'ai fait du community management au quotidien : j'ai décliné les calendriers éditoriaux à partir de la trame de l'agence, rédigé les légendes, publié les posts et animé les communautés des marques.","J'ai aussi sourcé des créateurs de contenu, de l'UGC et des trends adaptées à chaque marque."],
+    challenge:"Faire vivre au quotidien des marques très différentes, en respectant le ton de chacune.",
+    metrics:[
+      {label:"Univers de marque gérés en parallèle", value:"5", detail:"un ton et une communauté différents pour chacun"},
+      {label:"Calendriers éditoriaux réalisés", value:"10", detail:"déclinés à partir de la trame de l'agence"},
+      {label:"Profils UGC et créateurs retenus", value:"3", detail:"pour 3 campagnes de marques"}
+    ],
+    sections:[
+      {kind:"brands", title:"Les marques", text:["Parmi les marques dont j'ai animé les réseaux sociaux."], brands:[{n:"Bonne Maman",logo:"logo_cz_bonnemaman",d:"Confitures et biscuits"},{n:"SNCF",logo:"logo_cz_sncf",d:"Transport ferroviaire"},{n:"Spontex",logo:"logo_cz_spontex",d:"Entretien de la maison"},{n:"Yankee Candle",logo:"logo_cz_yankee",d:"Bougies parfumées"},{n:"WoodWick",logo:"logo_cz_woodwick",d:"Bougies à mèche en bois"}]},
+      {kind:"flow", title:"Mon rôle au quotidien", text:["Du calendrier éditorial jusqu'à la réponse au dernier commentaire."], steps:[
+        {t:"Calendrier éditorial", ic:"cal", d:"Création et déclinaison des calendriers à partir de la trame de l'agence."},
+        {t:"Légendes", ic:"pen", d:"Rédaction du texte de chaque publication, dans le ton de la marque."},
+        {t:"Publication", ic:"send", d:"Mise en ligne et gestion des posts."},
+        {t:"Stories", ic:"story", d:"Création de stories et repartage de contenus pertinents."},
+        {t:"Animation", ic:"chat", d:"Commentaires, DM, collabs : toutes les interactions avec la communauté."}
+      ]},
+      {kind:"flow", title:"Sourcing et veille", text:["Repérer ce qui allait faire vivre les marques."], steps:[
+        {t:"Créateurs de contenu", ic:"user", d:"Repérage de profils adaptés à chaque marque."},
+        {t:"UGC", ic:"cam", d:"Sourcing de contenus créés par les utilisateurs."},
+        {t:"Trends", ic:"trend", d:"Veille des tendances pertinentes à reprendre."}
+      ], plain:true}
+    ]
+  },
+  {
+    id:"come2ci", logo:{file:"logo_come2ci_rond",shape:"round"}, group:"client", name:"COME2CI", brand:{bg:"#4089B0",fg:"#FFFFFF"}, year:"2023",
+    role:"Chargée de marketing & communication",
+    sector:"Start-up pionnière : une plateforme de transaction de droits de propriété intellectuelle, déjà connue en Chine mais encore inconnue en France.",
+    eyebrow:"Stage · Avril – juillet 2023",
+    disciplines:["Stratégie","Contenus","Réseaux sociaux"],
+    tags:["Stratégie de communication","Veille concurrentielle","Ligne éditoriale","LinkedIn","Réseaux sociaux","Prospection","Salons internationaux","Anglais"],
+    context:["Pendant mon stage, j'ai construit la communication de COME2CI de A à Z : les réseaux sociaux n'existaient pas encore, tout était à créer.","J'ai élaboré la stratégie de communication, mené des analyses marketing et une veille concurrentielle, puis défini la ligne éditoriale et le plan de communication. J'ai ensuite créé les contenus, lancé et animé les réseaux sociaux, et participé au développement commercial.","Je gérais aussi la page LinkedIn, avec un rythme de publication soutenu, et la prospection : chaque jour, j'invitais des profils ciblés à suivre la page."],
+    challenge:"Faire connaître en France une start-up précurseure de la propriété intellectuelle et attirer un maximum de vendeurs et d'acheteurs de marques sur sa plateforme.",
+    metrics:[
+      {label:"Abonnés LinkedIn gagnés", value:"≈ 200", detail:"pendant le stage, grâce aux posts et aux invitations ciblées quotidiennes"}
+    ],
+    sections:[
+      {title:"Contenus et réseaux sociaux", text:["Analyses marketing, veille concurrentielle, ligne éditoriale et plan de communication, puis création des contenus en anglais et animation des réseaux sociaux."], layout:"wide", row:true, visuals:[{img:"come2ci_1"},{img:"come2ci_2"},{img:"come2ci_inta", alt:"COME2CI à l'INTA Annual Meeting"}]},
+      {title:"Salons internationaux", text:["Communication autour de la présence de COME2CI sur des salons internationaux : le China Trademark Festival à Dongguan et l'INTA Annual Meeting à Singapour."], layout:"wide", row:true, rowMax:"760px", visuals:[{img:"come2ci_3"},{img:"come2ci_4"}]}
+    ]
+  },
+  {
+    id:"le-pompon-sur-la-roue", logo:{file:"logo_pompon",shape:"round"}, group:"perso", name:"Le Pompon sur la Roue", brand:{bg:"#F4C9D2",fg:"#2A2230"}, year:"Podcast",
+    role:"Co-création et animation d'un podcast",
+    sector:"Un podcast où l'on parle de tout avec humour : entrepreneuriat, sport, fête, culture. Micro-trottoirs, jeux, débats, et des interviews guidées par une roue.",
+    eyebrow:"Projet personnel · Podcast",
+    disciplines:["Contenus","Réseaux sociaux","Podcast"],
+    tags:["Podcast","Spotify","Instagram","TikTok","Vidéo"],
+    context:["Co-création et animation du podcast, et déclinaison des épisodes en vidéos courtes pour Instagram et TikTok."],
+    challenge:"Lancer un média de zéro et lui construire une audience sur plusieurs plateformes.",
+    metrics:[
+      {label:"Épisodes publiés", hint:"Depuis le lancement"},
+      {label:"Écoutes cumulées", hint:"Spotify for Creators"},
+      {label:"Vues de la meilleure vidéo", hint:"Instagram ou TikTok"}
+    ],
+    sections:[
+      {title:"Vidéos TikTok et Instagram", text:["Des vidéos courtes pour faire vivre le podcast entre deux épisodes : micro-trottoirs au stade, extraits d'épisodes tournés en public et teasers avant chaque sortie."], layout:"wide", cols:4, visuals:[{video:"pompon_v1"},{video:"pompon_v2"},{video:"pompon_v3"},{video:"pompon_v4"}]},
+      {title:"Le podcast", text:["Production et animation des épisodes, disponibles sur les plateformes d'écoute."], links:[{label:"Écouter sur Spotify",url:"https://open.spotify.com/show/11km5ZOdECDFKogJcSCWdh"},{label:"Instagram",url:"https://www.instagram.com/le_pompon_sur_la_roue/"},{label:"TikTok",url:"https://www.tiktok.com/@le.pompon.sur.la.roue"}], narrow:true, visuals:[{img:"podcast", href:"https://open.spotify.com/show/11km5ZOdECDFKogJcSCWdh", alt:"Le Pompon sur la Roue sur Spotify"}]}
+    ]
+  },
+  {
+    id:"lutti", logo:{file:"logo_lutti",shape:"wide"}, group:"perso", name:"Lutti", brand:{bg:"#D9A6EA",fg:"#2E0B36"}, year:"Master",
+    role:"Stratégie de communication 2025",
+    sector:"Projet de groupe du Master 2 Marketing et Communication (TSM) : définir la stratégie de communication 2025 de la marque Lutti.",
+    eyebrow:"Projet de Master · TSM",
+    disciplines:["Stratégie"],
+    tags:["Stratégie de communication","Projet de groupe","Master 2"],
+    context:["Projet de groupe : analyse de la marque, plateforme de marque, objectifs de communication, big idea, concept créatif, plan d'action (dont une déclinaison pour Halloween) et KPIs.","À compléter : ta contribution personnelle dans le groupe."],
+    challenge:"Positionner Lutti comme une marque qui valorise l'excentricité, l'audace et l'expression de soi.",
+    bigidea:{t:"On a tous un côté Lutti", sub:"Une part de folie, une touche d'originalité, un côté unique. Alors, pourquoi le cacher ?"},
+    metrics:[],
+    sections:[{kind:"carousel", title:"La recommandation en 5 slides", text:["La couverture, les objectifs de communication, la big idea, le concept créatif décliné en visuels, puis sa déclinaison « Révèle ton côté obscur » pour Halloween."], slides:["lutti_1","lutti_9","lutti_17","lutti_18","lutti_29"]}]
+  },
+  {
+    id:"budweiser", logo:{file:"logo_budweiser",shape:"wide"}, group:"perso", name:"Budweiser", brand:{bg:"#2E2A5E",fg:"#FFFFFF"}, year:"Master",
+    role:"Campagne pour les 150 ans de la marque",
+    sector:"Projet de groupe du Master 2 Marketing et Communication (TSM) : créer une campagne dédiée aux 150 ans de Budweiser.",
+    eyebrow:"Projet de Master · TSM",
+    disciplines:["Stratégie","Contenus"],
+    tags:["Campagne","Concept créatif","Projet de groupe","Master 2"],
+    context:["Projet de groupe : cibles et insight, big idea, dispositif offline et online (affichage, écrans connectés, documentaire Netflix, bars cachés, événements sportifs) et répartition d'un budget de 10 M€.","À compléter : ta contribution personnelle dans le groupe."],
+    challenge:"Positionner Budweiser comme un symbole de longévité et de qualité constante : une marque « toujours présente », mais sans prétention.",
+    bigidea:{t:"150 ans dans une bouteille", sub:"Slogan : « On n'a rien fait pour, mais on était déjà là »"},
+    metrics:[],
+    sections:[{kind:"carousel", title:"La campagne en 5 slides", text:["La couverture, les cibles et l'insight, la big idea, la campagne d'affichage et la répartition du budget de 10 M€."], slides:["bud_1","bud_7","bud_10","bud_13","bud_26"]}]
+  },
+  {
+    id:"article-seo", logo:{file:"logo_gnitekram",shape:"wide"}, group:"perso", name:"Article SEO", brand:{bg:"#4A8236",fg:"#FFFFFF"}, year:"Blog",
+    role:"Rédaction pour le blog Gnitekram",
+    sector:"Un article de blog marketing pensé pour bien se référencer et rester pertinent pour le lecteur : l'arrivée de Squeezie et de son équipe Gentle Mates dans l'e-sport.",
+    eyebrow:"Rédaction SEO",
+    disciplines:["SEO","Contenus"],
+    tags:["SEO","Rédaction web","E-sport","Marketing d'influence"],
+    context:["L'article analyse comment l'arrivée de Squeezie redéfinit le marketing dans l'e-sport, entre opportunités pour les marques et enjeux propres au secteur."],
+    challenge:"Écrire pour Google et pour le lecteur en même temps.",
+    metrics:[
+      {label:"Mot-clé principal ciblé", hint:"Et sa position si tu la connais"},
+      {label:"Vues de l'article", hint:"Si le blog te les communique"}
+    ],
+    sections:[{title:"L'article", text:["Recherche de mots-clés, structure Hn et rédaction."], links:[{label:"Lire l'article",url:"https://gnitekram.fr/squeezie-et-gentle-mates-limpact-des-influenceurs-sur-le-sport/"}], narrow:true, visuals:[{img:"seo", href:"https://gnitekram.fr/squeezie-et-gentle-mates-limpact-des-influenceurs-sur-le-sport/", alt:"Article « Squeezie et Gentle Mates : l'impact des influenceurs sur l'E-sport »"}]}]
+  }
+];
+
+const SUBS = [
+  {
+    id:"anvesana-yoga", logo:{file:"logo_anvesana_blanc",shape:"round"}, parent:"anvesana", name:"Anvesana Yoga", brand:{bg:"#C4502A",fg:"#FFFFFF"}, year:"2026", incomplete:true,
+    blurb:"Personal branding de Jeanne, lives et retraites de yoga en itinérance.",
+    sector:"La marque de yoga de Jeanne : cours en live et retraites de voyage et de yoga en itinérance.",
+    eyebrow:"Anvesana · Mission freelance · 2026",
+    tags:["Personal branding","Instagram","Reels","Événements","Retraites","Prospection téléphonique","Go High Level"],
+    context:["J'ai construit la stratégie de la marque, travaillé le personal branding de Jeanne, créé les contenus et animé les réseaux sociaux.","J'ai aussi assuré la communication des lives et des retraites, et vendu les retraites par téléphone via Go High Level."],
+    challenge:"À compléter : l'enjeu propre à Anvesana Yoga en une phrase.",
+    metrics:[
+      {label:"Croissance de la communauté Instagram", hint:"Avant / après la mission"},
+      {label:"Vues des Reels", hint:"Meilleur contenu ou moyenne"},
+      {label:"Inscrits aux lives", hint:"Live du 18 janvier par exemple"},
+      {label:"Places de retraite vendues", hint:"Grâce à la prospection téléphonique"}
+    ],
+    sections:[
+      {title:"Personal branding de Jeanne", text:["Des Reels qui racontent l'univers de Jeanne : sa pratique, ses voyages et sa vision du yoga, avec des textes à la première personne pour créer un lien sincère avec la communauté."], narrow:true, visuals:[{video:"yoga_reel"}]},
+      {title:"Lives et retraites", text:["La communication des temps forts de la marque : les cours de yoga en live et la retraite « Voyage & Yoga en itinérance » au Guatemala, en mars et avril 2026.","Les retraites étaient ensuite vendues par téléphone, avec un suivi des prospects dans Go High Level."], cols:2, visuals:[{img:"yoga_guatemala", alt:"Retraite Voyage & Yoga en itinérance au Guatemala"},{img:"yoga_live", alt:"Live yoga du dimanche 18 janvier"}]}
+    ]
+  },
+  {
+    id:"la-brosse-coco", logo:{file:"logo_coco_creme",shape:"wide"}, parent:"anvesana", name:"La Brosse Coco", brand:{bg:"#6E4527",fg:"#FFFFFF"}, year:"2026",
+    blurb:"Personal branding TikTok de la fondatrice et carrousels Instagram éducatifs.",
+    sector:"Une marque de brosses 100 % végétales en fibres naturelles, pour le brossage à sec du corps et du visage.",
+    eyebrow:"Anvesana · Mission freelance · 2026",
+    tags:["Personal branding","TikTok","Instagram","Calendrier éditorial","Script et montage vidéo","Préventes"],
+    context:["J'ai construit la stratégie de contenu de la marque et animé ses réseaux sociaux, sur Instagram et TikTok, avec un calendrier éditorial à raison d'un contenu par jour.","Pour préparer le lancement, la stratégie a d'abord misé sur le personal branding de Jeanne, la fondatrice : créer une communauté autour d'elle et la faire grandir jusqu'aux préventes."],
+    challenge:"Faire connaître une marque avant même son lancement, et transformer cette attention en préventes.",
+    resultsNote:"En un mois",
+    metrics:[
+      {label:"Inscriptions aux préventes", value:"25", detail:"avant le lancement de la marque"},
+      {label:"Candidatures d'ambassadrices", value:"10", detail:"messages reçus de personnes intéressées"},
+      {label:"Vues sur la meilleure vidéo", value:"1 890", detail:"TikTok"},
+      {label:"Nouveaux abonnés", value:"+85", detail:"65 sur TikTok, 20 sur Instagram"}
+    ],
+    sections:[
+      {kind:"flow", plain:true, title:"Une plateforme, un rôle", text:["Chaque réseau avait une mission précise dans la stratégie de lancement."], steps:[
+        {t:"Instagram, la vitrine", ic:"cam", d:"La vitrine de la marque en attendant le site internet : produits, conseils et carrousels éducatifs."},
+        {t:"TikTok, la viralité", ic:"trend", d:"Développer la visibilité, porter le storytelling de Jeanne et partager la cagnotte des préventes, avec des contenus plus fun et créatifs, adaptés à l'audience."},
+        {t:"Un contenu par jour", ic:"cal", d:"Un calendrier éditorial quotidien, dont un format face cam de Jeanne chaque semaine, avec script et montage vidéo."}
+      ]},
+      {title:"TikTok · Personal branding de Jeanne", text:["Des vidéos où Jeanne se présente, raconte son projet et montre ses brosses. Chaque semaine, un format face cam scripté et monté, et plusieurs formats testés pour trouver ce qui crée le plus de lien avec la communauté."], layout:"wide", cols:4, visuals:[{video:"coco_tt_jeanne"},{video:"coco_tt_1"},{video:"coco_tt_2"},{video:"coco_tt_3"}]},
+      {kind:"carousels", cols:3, title:"TikTok · Carrousels éducatifs", text:["Partir d'une préoccupation concrète de la cible pour apporter des conseils utiles, puis amener naturellement vers la brosse."], items:[
+        {title:"4 erreurs en brossage à sec", slides:["coco_c1_1","coco_c1_2","coco_c1_3","coco_c1_4","coco_c1_5","coco_c1_6"]},
+        {title:"Alerte jambes lourdes", slides:["coco_c2_1","coco_c2_2","coco_c2_3","coco_c2_4","coco_c2_5"]},
+        {title:"Marre de la peau de fraise ?", slides:["coco_fr_1","coco_fr_2","coco_fr_3","coco_fr_4","coco_fr_5"]},
+        {title:"Les bienfaits du brossage à sec", slides:["coco_c3_1","coco_c3_2","coco_c3_3","coco_c3_4","coco_c3_5","coco_c3_6","coco_c3_7"]},
+        {title:"3 tips pour un glow up avant l'été", slides:["coco_c5_1","coco_c5_2","coco_c5_3","coco_c5_4"]},
+        {title:"Dit bye bye à ta cellulite !", slides:["coco_cover_cellulite"]}
+      ]},
+      {kind:"carousels", cols:3, title:"Instagram · La vitrine de la marque", text:["En attendant le site internet, Instagram présentait la gamme, les bénéfices de chaque brosse et les valeurs de la marque, avec un appel à commander."], items:[
+        {title:"Quelle Brosse Coco est faite pour toi ?", slides:[{video:"coco_q_cover"},"coco_q_1","coco_q_2","coco_q_3","coco_q_4","coco_q_5","coco_q_6"]},
+        {title:"100 % végétale, ça veut dire quoi ?", slides:["coco_c4_1","coco_c4_2","coco_c4_3","coco_c4_4","coco_c4_5","coco_c4_6","coco_c4_7","coco_c4_8"]},
+        {title:"Les valeurs de la marque", slides:["coco_val_1","coco_val_2"]}
+      ], grid:[{img:"coco_stimule"},{img:"coco_japonaise"}]}
+    ]
+  }
+];
+const ALL = () => [...PROJECTS, ...SUBS];
+
+/* ============================================================ */
+const app = document.getElementById("app");
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let activeFilter = "Tout";
+
+const asset = n => "assets/"+n+".webp";
+const ratio = n => DIMS[n] ? DIMS[n][0]+"/"+DIMS[n][1] : "1/1";
+function tileHTML(v){
+  if (typeof v === "object" && v.svg === "n8n") return `<figure class="illus">${N8N_SVG}<figcaption>Exemple de workflow d'agents IA, type n8n</figcaption></figure>`;
+  if (typeof v === "object" && v.note) return `<div class="media note${v.wide?" span2":""}${v.span===3?" span3":""}"><span class="note-big">${esc(v.note.big)}</span><span class="note-small">${esc(v.note.small)}</span></div>`;
+  if (typeof v === "object" && v.video) return `<div class="media vid${v.wide?" wide":""}${v.tall?" tall":""}" style="aspect-ratio:${v.tall?"auto":ratio(v.video)}"><video controls playsinline preload="none" poster="assets/${v.video}_poster.webp" src="assets/${v.video}.mp4"></video><button type="button" class="vid-expand" data-video="${v.video}" aria-label="Voir la vidéo en grand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button></div>`;
+  if (typeof v === "object" && v.img) {
+    const inner = `<img loading="lazy" src="${asset(v.img)}" width="${DIMS[v.img][0]}" height="${DIMS[v.img][1]}" alt="${esc(v.alt||"")}">`;
+    if (v.href) return `<a class="media shot${v.wide?" wide":""}" href="${esc(v.href)}" target="_blank" rel="noopener" style="aspect-ratio:${ratio(v.img)}">${inner}<span class="go-ext">Ouvrir ↗</span></a>`;
+    return `<button type="button" class="media shot${v.wide?" wide":""}" data-full="${asset(v.img)}" data-alt="${esc(v.alt||"")}" style="aspect-ratio:${ratio(v.img)}" aria-label="Agrandir le visuel">${inner}</button>`;
+  }
+  const label = typeof v === "string" ? v : v.label;
+  const wide = typeof v === "object" && v.wide;
+  return `<div class="tile${wide?" wide":""}"><span class="k">Visuel à ajouter</span><span class="t">${esc(label)}</span></div>`;
+}
+
+const ICONS={
+  cal:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+  pen:'<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/>',
+  send:'<path d="M21 3L3 10.5l7.5 3L14 21z"/><path d="M10.5 13.5L21 3"/>',
+  story:'<circle cx="12" cy="12" r="8.5" stroke-dasharray="5 2.5"/><circle cx="12" cy="12" r="3.5"/>',
+  chat:'<path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 10h8M8 13h5"/>',
+  user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/>',
+  cam:'<rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.5"/><path d="M8.5 7l2-3h3l2 3"/>',
+  trend:'<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>'
+};
+const folderSVG = () => '<svg class="folder" viewBox="0 0 48 38" aria-hidden="true"><path class="back" d="M3 6a3 3 0 0 1 3-3h12.5l4 4H42a3 3 0 0 1 3 3v24a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z"/><path class="front" d="M3 13.5a3 3 0 0 1 3-3h36a3 3 0 0 1 3 3V34a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z"/><path class="shine" d="M6.5 14h35"/></svg>';
+
+function carouselHTML(slides, label){
+  const first = typeof slides[0] === "object" ? slides[1] : slides[0];
+  const slide = (n,i) => typeof n === "object"
+    ? `<div class="car-slide"><video autoplay muted loop playsinline preload="metadata" poster="assets/${n.video}_poster.webp" src="assets/${n.video}.mp4" aria-label="Couverture animée"></video></div>`
+    : `<button type="button" class="car-slide shot" data-full="${asset(n)}" aria-label="Agrandir la slide ${i+1}"><img loading="lazy" src="${asset(n)}" width="${DIMS[n][0]}" height="${DIMS[n][1]}" alt="Slide ${i+1}"></button>`;
+  return `<div class="car${slides.length<2?" single":""}" style="--r:${ratio(first)}"><div class="car-track" tabindex="0" aria-label="${esc(label||"Carrousel")}">${slides.map(slide).join("")}</div>
+    <div class="car-nav"><button type="button" class="car-btn" data-dir="-1" aria-label="Slide précédente">←</button><span class="car-count">1 / ${slides.length}</span><button type="button" class="car-btn" data-dir="1" aria-label="Slide suivante">→</button></div></div>`;
+}
+
+function specialHTML(s,p){
+  const head = `<div class="txt"><h3>${esc(s.title)}</h3>${(s.text||[]).map(t=>`<p>${esc(t)}</p>`).join("")}${s.take?`<p class="take">${esc(s.take)}</p>`:""}</div>`;
+  if (s.kind==="newsletter") { const e=s.edition; return `<article class="block wide">${head}
+    <div class="news" style="--brand:${p.brand.bg}">
+      <div class="mail">
+        <div class="mail-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="mail-meta"><span class="lbl">De</span><span>Reacteev</span><span class="lbl">Date</span><span>${esc(e.date)}</span><span class="lbl">Objet</span><strong>Reacteev News · ${esc(e.subject)}</strong></div>
+        <div class="mail-body">
+          <p class="mail-intro">${esc(e.intro)}</p>
+          <p class="mail-prog">Au programme ce mois-ci :</p>
+          <ul>${e.items.map(it=>`<li>${esc(it)}</li>`).join("")}</ul>
+          <p class="mail-end">Bonne lecture !</p>
+          <div class="mail-links"><button type="button" class="shot mail-see" data-full="${asset(e.img)}" data-long="1" data-alt="Newsletter Reacteev News du ${esc(e.date)}, en entier">Lire l'édition complète</button>${e.href?`<a class="mail-see" href="${esc(e.href)}" target="_blank" rel="noopener">Voir sur LinkedIn ↗</a>`:""}</div>
+        </div>
+      </div>
+      <ol class="news-points">${s.points.map((pt,i)=>`<li><span class="mono">0${i+1}</span><b>${esc(pt.t)}</b><p>${esc(pt.d)}</p></li>`).join("")}</ol>
+    </div></article>`; }
+  if (s.kind==="posts") return `<article class="block wide">${head}
+    <div class="li-posts" style="--brand:${p.brand.bg}">${s.posts.map(po=>`<div class="li-post">
+      <div class="li-head"><span class="li-logo" aria-hidden="true">${esc(p.name[0])}</span><span><b>${esc(p.name)}</b><small>Post LinkedIn</small></span></div>
+      <div class="li-body">${po.body.map(t=>`<p>${esc(t).replace(/\n/g,"<br>")}</p>`).join("")}</div>
+      <button type="button" class="li-more">… voir plus</button>
+      <button type="button" class="shot li-img" data-full="${asset(po.img)}"><img loading="lazy" src="${asset(po.img)}" width="${DIMS[po.img][0]}" height="${DIMS[po.img][1]}" alt="Visuel du post"></button>
+    </div>`).join("")}</div>
+    <div class="tiles" style="--n:4;margin-top:16px">${s.grid.map(tileHTML).join("")}</div></article>`;
+  if (s.kind==="doc") return `<article class="block wide"><div class="doc" style="--brand:${p.brand.bg};--brand-fg:${p.brand.fg}">
+      <div class="doc-txt"><h3>${esc(s.title)}</h3>${s.text.map(t=>`<p>${esc(t)}</p>`).join("")}${s.take?`<p class="take">${esc(s.take)}</p>`:""}</div>
+      <button type="button" class="shot doc-cover" data-full="${asset(s.img)}" data-alt="${esc(s.title)}"><img loading="lazy" src="${asset(s.img)}" width="${DIMS[s.img][0]}" height="${DIMS[s.img][1]}" alt="Couverture du document"></button>
+      <ol class="doc-steps">${s.steps.map((st,i)=>`<li><span class="mono">Étape ${i+1}</span><b>${esc(st.t)}</b><p>${esc(st.d)}</p></li>`).join("")}</ol>
+    </div></article>`;
+  if (s.kind==="web") return `<article class="block wide">${head}
+    <div class="web" style="--brand:${p.brand.bg}">
+      <figure class="web-page">
+        <div class="browser">
+          <div class="browser-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><a class="browser-url" href="${esc(s.page.href)}" target="_blank" rel="noopener">${esc(s.page.url)}<span aria-hidden="true">↗</span></a></div>
+          <div class="browser-view" tabindex="0" aria-label="Aperçu défilant de la page"><img loading="lazy" src="${asset(s.page.img)}" width="${DIMS[s.page.img][0]}" height="${DIMS[s.page.img][1]}" alt="${esc(s.page.caption)} du site Reacteev"></div>
+        </div>
+        <figcaption><span>${esc(s.page.caption)} · faites défiler</span><a href="${esc(s.page.href)}" target="_blank" rel="noopener">Voir en ligne ↗</a></figcaption>
+      </figure>
+      <ol class="news-points web-points">${s.points.map((pt,i)=>`<li><span class="mono">0${i+1}</span><b>${esc(pt.t)}</b><p>${esc(pt.d)}</p></li>`).join("")}</ol>
+    </div></article>`;
+  if (s.kind==="also") return `<article class="block also"><div class="txt"><h3>${esc(s.title)}</h3></div><div class="txt">${s.text.map(t=>`<p>${esc(t)}</p>`).join("")}</div></article>`;
+  if (s.kind==="carousel") return `<article class="block"><div class="txt"><h3>${esc(s.title)}</h3>${s.text.map(t=>`<p>${esc(t)}</p>`).join("")}${s.take?`<p class="take">${esc(s.take)}</p>`:""}</div>${carouselHTML(s.slides, s.title)}</article>`;
+  if (s.kind==="carousels") return `<article class="block wide"><div class="txt"><h3>${esc(s.title)}</h3>${s.text.map(t=>`<p>${esc(t)}</p>`).join("")}</div><div class="cars"${s.cols?` style="grid-template-columns:repeat(${s.cols},minmax(0,1fr))"`:""}>${s.items.map(it=>`<div class="car-item"><p class="car-title">${esc(it.title)}</p>${carouselHTML(it.slides, it.title)}</div>`).join("")}</div>${s.grid?`<div class="tiles" style="--n:${s.grid.length>2?3:2};max-width:${s.grid.length>2?"100%":"66%"};margin-top:20px">${s.grid.map(tileHTML).join("")}</div>`:""}</article>`;
+  if (s.kind==="brands") return `<article class="block wide">${head}<div class="logowall">${s.brands.map(b=>`<div class="logo-card"><div class="lg"><img loading="lazy" src="assets/${b.logo}.png" alt="${esc(b.n)}"></div><span>${esc(b.d)}</span></div>`).join("")}</div></article>`;
+  return `<article class="block wide">${head}<ol class="flow${s.plain?" plain":""}">${s.steps.map((st,i)=>`<li><div class="top-row">${st.ic?`<span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24">${ICONS[st.ic]}</svg></span>`:""}<span class="n">${s.plain?"":`${s.numLabel||"Étape"} ${i+1}`}</span></div><b>${esc(st.t)}</b><p>${esc(st.d)}</p></li>`).join("")}</ol></article>`;
+}
+
+function rowHTML(p){
+  const hidden = activeFilter!=="Tout" && !p.disciplines.includes(activeFilter);
+  return `<li class="row${hidden?" dim":""}" style="--brand:${p.brand.bg}">
+    <a href="#${p.id}">
+      <span class="yr">${esc(p.year)}</span>
+      <span class="nm"><svg class="folder" viewBox="0 0 48 38" aria-hidden="true"><path class="back" d="M3 6a3 3 0 0 1 3-3h12.5l4 4H42a3 3 0 0 1 3 3v24a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z"/><path class="front" d="M3 13.5a3 3 0 0 1 3-3h36a3 3 0 0 1 3 3V34a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z"/><path class="shine" d="M6.5 14h35"/></svg><span>${esc(p.name)}</span></span>
+      <span class="meta"><span class="role">${esc(p.role)}</span>${p.incomplete&&DRAFT?'<span class="badge">à compléter</span>':''}<br><span class="disc">${p.disciplines.map(esc).join(" · ")}</span></span>
+      <span class="arr" aria-hidden="true">→</span>
+    </a></li>`;
+}
+
+let introPlayed = false;
+function home(){
+  const intro = !introPlayed; introPlayed = true;
+  const clients = PROJECTS.filter(p=>p.group==="client");
+  const perso = PROJECTS.filter(p=>p.group==="perso");
+  app.innerHTML = `
+  <section class="hero${intro?" intro":""}"><div class="wrap">
+    <div>
+      <p class="mono eyebrow" style="color:var(--muted)">Consultante marketing &amp; communication digitale</p>
+      <div class="hero-title">
+        <h1><span class="w" style="--i:0"><span>Salut,</span></span> <span class="w" style="--i:1"><span>moi</span></span><br><span class="w" style="--i:2"><span>c'est</span></span> <span class="w" style="--i:3"><span><em>Sarah</em>&nbsp;!</span></span></h1>
+        <figure class="polaroid"><img src="${AVATAR}" alt="Portrait de Sarah Dkhissi"></figure>
+      </div>
+      <p class="lede">J'aide les entreprises à transformer leurs idées en actions concrètes et impactantes. De la <strong>stratégie de contenu</strong> à la <strong>gestion des réseaux sociaux</strong>, en passant par le <strong>SEO</strong> et les <strong>campagnes digitales</strong>, je crée des expériences qui captent et engagent.</p>
+      <p class="facts-line"><span>Basée à Toulouse</span><span>Freelance depuis 2025</span><span>Anglais &amp; espagnol C1</span></p>
+      <div class="ctas">
+        <a class="btn primary" href="#contact" data-scroll="contact">On fait équipe ?</a>
+        <a class="btn" href="#projets" data-scroll="projets">Voir les projets ↓</a>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="wrap" id="projets">
+    <div class="section-head">
+      <h2>Projets</h2>
+    </div>
+    <div class="filters" role="group" aria-label="Filtrer par compétence">
+      ${["Tout",...DISCIPLINES].map(d=>`<button type="button" class="chip" data-filter="${esc(d)}" aria-pressed="${d===activeFilter}">${esc(d)}</button>`).join("")}
+    </div>
+    <div class="group-label mono"><span>Missions clients</span><span>${clients.length}</span></div>
+    <ul class="rows">${clients.map(rowHTML).join("")}</ul>
+    <div class="group-label mono"><span>Projets personnels &amp; Master</span><span>${perso.length}</span></div>
+    <ul class="rows">${perso.map(rowHTML).join("")}</ul>
+  </section>`;
+  app.querySelectorAll("[data-filter]").forEach(b=>b.addEventListener("click",()=>{
+    activeFilter = b.dataset.filter;
+    app.querySelectorAll("[data-filter]").forEach(x=>x.setAttribute("aria-pressed", x===b));
+    app.querySelectorAll(".row").forEach((li,i)=>{
+      const p = [...clients,...perso][i];
+      li.classList.toggle("dim", activeFilter!=="Tout" && !p.disciplines.includes(activeFilter));
+    });
+  }));
+  if (intro){
+    const hero = app.querySelector(".hero");
+    const fonts = (document.fonts && document.fonts.ready) || Promise.resolve();
+    Promise.race([fonts, new Promise(r=>setTimeout(r,800))]).then(()=>requestAnimationFrame(()=>hero.classList.add("go")));
+  }
+}
+
+function project(p){
+  const metrics = (p.metrics||[]).length ? `
+    <section class="wrap results">
+      <div class="results-head"><h2>Résultats</h2>${p.resultsNote?`<p class="mono">${esc(p.resultsNote)}</p>`:(DRAFT && p.metrics.some(m=>!m.value)?'<p>Indicateurs suggérés, à remplir avec tes vrais chiffres.</p>':'')}</div>
+      <div class="kpis">${p.metrics.map(m=>`
+        <div class="kpi${m.value?" filled":""}"><div class="v">${m.value?esc(m.value):"—"}</div><div class="l">${esc(m.label)}</div>${m.value&&m.detail?`<div class="h">${esc(m.detail)}</div>`:""}${!m.value&&DRAFT?`<div class="h">${esc(m.hint||"")}</div>`:""}</div>`).join("")}
+      </div>
+    </section>` : "";
+  app.innerHTML = `
+  <div class="wrap">${p.parent?`<a class="back" href="#${p.parent}">← ${esc(ALL().find(x=>x.id===p.parent).name)}</a>`:`<a class="back" href="#accueil">← Tous les projets</a>`}</div>
+  <section class="band" style="--brand:${p.brand.bg};--brand-fg:${p.brand.fg}"><div class="wrap band-grid">
+    <div class="band-main">
+      <p class="mono eyebrow">${esc(p.eyebrow)}</p>
+      <h1>${esc(p.name)}</h1>
+      <p class="sector">${esc(p.sector)}</p>
+      <div class="tags">${p.tags.map(t=>`<span>${esc(t)}</span>`).join("")}</div>
+    </div>
+    ${p.logo?`<img class="band-logo ${p.logo.shape}" src="assets/${p.logo.file}.png" alt="Logo ${esc(p.name)}">`:""}
+  </div></section>
+  <section class="wrap brief">
+    <div class="ctx"><h2>Ma mission</h2>${p.context.map(c=>`<p>${esc(c)}</p>`).join("")}</div>
+    <div class="defi"><h2>Mon défi</h2><p>${esc(p.challenge)}</p></div>
+  </section>
+  ${p.bigidea?`<section class="wrap"><div class="bigidea"><span class="mono">Big idea</span><p class="bi-t">« ${esc(p.bigidea.t)} »</p><p class="bi-s">${esc(p.bigidea.sub)}</p></div></section>`:""}
+  ${p.subs?`<section class="wrap subs"><h2>Deux marques, deux projets</h2><div class="subcards">${p.subs.map(id=>{const q=SUBS.find(x=>x.id===id);return `<a class="subcard" href="#${q.id}" style="--brand:${q.brand.bg};--brand-fg:${q.brand.fg}">${folderSVG()}<strong>${esc(q.name)}</strong><p>${esc(q.blurb)}</p><span class="go">Voir le projet →</span></a>`}).join("")}</div></section>`:""}
+  ${p.highlight?`<div class="wrap"><p class="highlight"><span class="mono">${esc(p.highlightLabel||"La suite")}</span><span>${esc(p.highlight)}</span></p></div>`:""}
+  ${metrics}
+  <section class="wrap done">
+    <h2>Ce que j'ai fait</h2>
+    ${p.sections.map(s=> s.kind ? specialHTML(s,p) : `
+      <article class="block${s.layout==="wide"?" wide":""}${s.narrow?" narrow":""}" style="--brand:${p.brand.bg}">
+        <div class="txt">
+          <h3>${esc(s.title)}</h3>
+          ${s.text.map(t=>`<p>${esc(t)}</p>`).join("")}
+          ${s.take?`<p class="take">${esc(s.take)}</p>`:""}
+          ${s.result?`<p class="sec-result"><span class="mono">Résultat</span>${esc(s.result)}</p>`:""}
+          ${s.links?`<div class="links">${s.links.map(l=>`<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>`:""}
+        </div>
+        ${s.visuals.length?`<div class="tiles${s.row?" row":""}" style="--n:${s.cols || Math.min(s.visuals.length,3)}${s.row?`;grid-template-columns:${s.visuals.map(v=>{const d=DIMS[v.img||v.video];return (d[0]/d[1]).toFixed(3)+"fr";}).join(" ")}${s.rowMax?`;max-width:${s.rowMax}`:""}`:""}">${s.visuals.map(tileHTML).join("")}</div>`:""}
+      </article>`).join("")}
+  </section>
+  <section class="wrap"><details class="picker" id="picker">
+    <summary><span><span class="mono">Continuer la visite</span><strong>Voir un autre projet</strong></span><span class="chev" aria-hidden="true">↓</span></summary>
+    <ul>${PROJECTS.flatMap(q=>[q,...(q.subs||[]).map(id=>SUBS.find(x=>x.id===id))]).map(q=>`<li${q.parent?' class="sub"':''}><a href="#${q.id}" style="--brand:${q.brand.bg}"${q.id===p.id?' aria-current="page"':''}>${folderSVG()}<span>${esc(q.name)}</span><small>${q.id===p.id?"ici":esc(q.year)}</small></a></li>`).join("")}</ul>
+  </details></section>`;
+}
+
+function about(){
+  app.innerHTML = `
+  <section class="wrap about">
+    <div><img src="${PHOTO}" alt="Portrait de Sarah Dkhissi"></div>
+    <div>
+      <p class="mono" style="color:var(--muted)">À propos</p>
+      <h1 style="margin-top:12px">Je transforme les idées en contenus qui donnent envie de s'arrêter.</h1>
+      <p class="big">Je suis Sarah, freelance en marketing et communication. J'aide les marques et les entreprises à mieux raconter ce qu'elles font, pourquoi elles le font, et pourquoi cela devrait intéresser les autres.</p>
+      <div class="prose">
+        <p>Avoir une expertise, un bon produit ou une vraie histoire ne suffit pas toujours : encore faut-il savoir la rendre visible.</p>
+        <h2>J'aime les sujets qui demandent de comprendre avant de communiquer</h2>
+        <p>J'ai travaillé sur des univers très différents : technologie, conseil, transformation digitale, IA, outils SaaS, yoga, cosmétique naturelle. Ils ont tous le même enjeu : trouver le bon angle pour rendre leur expertise claire, intéressante et mémorable.</p>
+        <p>Plonger dans un nouvel univers, poser beaucoup de questions, comprendre ce qui se joue derrière un produit ou un service, puis transformer cette matière en stratégie, en contenus et en messages qui parlent aux bonnes personnes : c'est ce qui me plaît.</p>
+        <h2>Ma façon de travailler</h2>
+        <p>Je ne crois pas aux contenus créés uniquement parce qu'il faut « poster quelque chose ». Je crois aux contenus qui ont une intention : faire comprendre, faire réfléchir, créer de la confiance, donner envie d'aller plus loin.</p>
+        <p>Je travaille à la croisée de la stratégie et de la création : comprendre les enjeux business, construire une ligne éditoriale, trouver les bons sujets, écrire, créer, tester et ajuster. Avec une obsession simple : que la communication ressemble vraiment à l'entreprise qu'elle représente.</p>
+        <h2>Aujourd'hui, j'accompagne des entreprises qui ont quelque chose à raconter</h2>
+        <ul><li>Une expertise à rendre visible</li><li>Un produit à faire découvrir</li><li>Une offre à mieux positionner</li><li>Une communauté à construire</li><li>Une communication qui mérite d'être repensée</li></ul>
+      </div>
+      <div class="facts">
+        <div>
+          <h3>Parcours</h3>
+          <ol>
+            <li>Freelance marketing &amp; communication<small>Depuis 2025</small></li>
+            <li>Master 2 Marketing &amp; Communication<small>Toulouse School of Management · 2025</small></li>
+            <li>PVT en Australie<small>Année de césure · 2023 – 2024</small></li>
+            <li>BTS Commerce international<small>Lycée Ozenne, Toulouse · 2018 – 2020</small></li>
+          </ol>
+        </div>
+        <div>
+          <h3>Langues</h3>
+          <ul><li>Anglais<small>Niveau C1</small></li><li>Espagnol<small>Niveau C1</small></li></ul>
+          <h3 style="margin-top:28px">Outils</h3>
+          <div class="tools">${["LLM & IA agentique","Notion","Trello","Airtable","Meta Business Suite","Google Ads","Google Analytics","Canva","CapCut","Suite Adobe","Sales Navigator","Folk","Mailjet","Go High Level"].map(t=>`<span>${t}</span>`).join("")}</div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function setNav(key){
+  document.querySelectorAll("[data-nav]").forEach(a=>{
+    if (a.dataset.nav===key) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current");
+  });
+}
+
+function route(){
+  const h = (location.hash||"#accueil").slice(1);
+  if (h==="contact"){ if(!app.innerHTML) {home();setNav("accueil");} document.getElementById("contact").scrollIntoView({behavior:"smooth"}); return; }
+  if (h==="projets"){ home(); setNav("accueil"); document.getElementById("projets").scrollIntoView(); return; }
+  const p = ALL().find(x=>x.id===h);
+  if (p){ project(p); setNav("accueil"); }
+  else if (h==="a-propos"){ about(); setNav("a-propos"); }
+  else { home(); setNav("accueil"); }
+  window.scrollTo(0,0);
+}
+
+document.addEventListener("click",e=>{
+  const a = e.target.closest("[data-scroll]");
+  if (!a) return;
+  e.preventDefault();
+  const el = document.getElementById(a.dataset.scroll);
+  if (el) el.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto":"smooth"});
+});
+
+document.getElementById("copyMail").addEventListener("click",function(){
+  const btn=this, txt=document.getElementById("mail").textContent;
+  const done=()=>{btn.textContent="Adresse copiée";btn.classList.add("ok");setTimeout(()=>{btn.textContent="Copier l'adresse";btn.classList.remove("ok")},2200)};
+  try{
+    navigator.clipboard.writeText(txt).then(done,()=>{selectMail();});
+  }catch(err){selectMail();}
+  function selectMail(){const r=document.createRange();r.selectNodeContents(document.getElementById("mail"));const s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent="Sélectionnée, fais Ctrl+C";}
+});
+
+const lb = document.createElement("div");
+lb.className = "lightbox"; lb.hidden = true;
+lb.innerHTML = '<img alt=""><video controls playsinline hidden></video><button type="button" class="lb-close" aria-label="Fermer">✕</button>';
+document.body.appendChild(lb);
+let lbReturn = null;
+function closeLb(){ lb.hidden = true; lb.querySelector("img").src = ""; const lv = lb.querySelector("video"); lv.pause(); lv.removeAttribute("src"); lv.load(); if (lbReturn) lbReturn.focus(); }
+lb.addEventListener("click", e => { if (e.target === lb || e.target.closest(".lb-close")) closeLb(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !lb.hidden) closeLb(); });
+document.addEventListener("click", e => {
+  const ve = e.target.closest(".vid-expand");
+  if (ve) {
+    lbReturn = ve; lb.classList.remove("long"); const n = ve.dataset.video; const im = lb.querySelector("img"), lv = lb.querySelector("video");
+    ve.closest(".media").querySelector("video").pause();
+    im.hidden = true; lv.hidden = false; lv.style.aspectRatio = ratio(n); lv.poster = "assets/"+n+"_poster.webp"; lv.src = "assets/"+n+".mp4";
+    lb.hidden = false; lv.play().catch(()=>{}); lb.querySelector(".lb-close").focus(); return;
+  }
+  const b = e.target.closest("button.shot");
+  if (b) { lbReturn = b; lb.classList.toggle("long", !!b.dataset.long); lb.scrollTop = 0; lb.querySelector("video").hidden = true; lb.querySelector("img").hidden = false; const im = lb.querySelector("img"); im.src = b.dataset.full; im.alt = b.dataset.alt || ""; lb.hidden = false; lb.querySelector(".lb-close").focus(); return; }
+  const more = e.target.closest(".li-more");
+  if (more) { const post = more.closest(".li-post"); post.classList.toggle("open"); more.textContent = post.classList.contains("open") ? "voir moins" : "… voir plus"; return; }
+  const nav = e.target.closest(".car-btn");
+  if (nav) { const t = nav.closest(".car").querySelector(".car-track"); t.scrollBy({left: Number(nav.dataset.dir) * t.clientWidth, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"}); }
+});
+function syncCars(root){
+  root.querySelectorAll(".car").forEach(c => {
+    const t = c.querySelector(".car-track"), n = t.children.length, count = c.querySelector(".car-count");
+    const [prev, next] = c.querySelectorAll(".car-btn");
+    const upd = () => { const i = Math.round(t.scrollLeft / Math.max(1, t.clientWidth)); count.textContent = (i+1) + " / " + n; prev.disabled = i <= 0; next.disabled = i >= n-1; };
+    t.addEventListener("scroll", () => requestAnimationFrame(upd), {passive:true});
+    t.addEventListener("keydown", e => { if (e.key==="ArrowRight"||e.key==="ArrowLeft"){ e.preventDefault(); t.scrollBy({left:(e.key==="ArrowRight"?1:-1)*t.clientWidth}); } });
+    upd();
+  });
+}
+new MutationObserver(() => syncCars(app)).observe(app, {childList:true});
+
+document.getElementById("draft").hidden = !DRAFT;
+window.addEventListener("hashchange", route);
+route();
+</script>
+
+</body></html>

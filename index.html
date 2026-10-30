@@ -392,7 +392,8 @@ video:-webkit-full-screen{object-fit:contain!important;background:#000}
 .tools span{font-size:14px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
 
 /* Contact */
-.contact{margin-top:96px;background:var(--head);color:var(--head-ink)}
+.contact{margin-top:96px;background:var(--head);color:var(--head-ink);min-height:calc(100vh - var(--top-h,62px));min-height:calc(100svh - var(--top-h,62px));display:flex;flex-direction:column;justify-content:center;scroll-margin-top:var(--top-h,62px)}
+.contact > .wrap{width:100%}
 .contact .wrap{padding-block:72px 40px}
 .contact h2{font-size:clamp(44px,8vw,104px);font-weight:800}
 .contact h2 em{font-style:normal;color:var(--accent)}
@@ -1041,7 +1042,7 @@ function setNav(key){
 
 function route(){
   const h = (location.hash||"#accueil").slice(1);
-  if (h==="contact"){ if(!app.innerHTML) {home();setNav("accueil");} document.getElementById("contact").scrollIntoView({behavior:"smooth"}); return; }
+  if (h==="contact"){ if(!app.innerHTML) {home();} setNav("contact"); document.getElementById("contact").scrollIntoView({behavior:"smooth"}); return; }
   if (h==="projets"){ home(); setNav("accueil"); document.getElementById("projets").scrollIntoView(); return; }
   const p = ALL().find(x=>x.id===h);
   if (p){ project(p); setNav("accueil"); }

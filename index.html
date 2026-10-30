@@ -348,7 +348,8 @@ video:-webkit-full-screen{object-fit:contain!important;background:#000}
 @media (prefers-reduced-motion:no-preference){.picker .chev{transition:transform .25s ease}}
 .picker[open] .chev{transform:rotate(180deg)}
 .picker ul{list-style:none;margin:0 0 8px;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px}
-.picker li a{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:6px;border:1px solid var(--line);background:var(--surface);text-decoration:none;font-weight:600}
+.picker li{min-width:0}
+.picker li a{display:flex;align-items:center;gap:12px;height:100%;min-height:58px;box-sizing:border-box;min-width:0;padding:12px 14px;border-radius:6px;border:1px solid var(--line);background:var(--surface);text-decoration:none;font-weight:600}
 .picker li a .folder{width:30px;height:24px}
 .picker li a:hover{background:var(--head);color:var(--head-ink);border-color:var(--head)}
 .picker li a[aria-current="page"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
@@ -972,7 +973,7 @@ function project(p){
   </section>
   <section class="wrap"><details class="picker" id="picker">
     <summary><span><span class="mono">Continuer la visite</span><strong>Voir un autre projet</strong></span><span class="chev" aria-hidden="true">↓</span></summary>
-    <ul>${PROJECTS.flatMap(q=>[q,...(q.subs||[]).map(id=>SUBS.find(x=>x.id===id))]).map(q=>`<li${q.parent?' class="sub"':''}><a href="#${q.id}" style="--brand:${q.brand.bg}"${q.id===p.id?' aria-current="page"':''}>${folderSVG()}<span>${esc(q.name)}</span><small>${q.id===p.id?"ici":esc(q.year)}</small></a></li>`).join("")}</ul>
+    <ul>${PROJECTS.flatMap(q=>[q,...(q.subs||[]).map(id=>SUBS.find(x=>x.id===id))]).map(q=>`<li${q.parent?' class="sub"':''}><a href="#${q.id}" style="--brand:${q.brand.bg}"${q.id===p.id?' aria-current="page"':''}>${folderSVG()}<span>${esc(q.name)}</span></a></li>`).join("")}</ul>
   </details></section>`;
 }
 

@@ -972,7 +972,7 @@ function project(p){
   </section>
   <section class="wrap"><details class="picker" id="picker">
     <summary><span><span class="mono">Continuer la visite</span><strong>Voir un autre projet</strong></span><span class="chev" aria-hidden="true">↓</span></summary>
-    <ul>${PROJECTS.flatMap(q=>[q,...(q.subs||[]).map(id=>SUBS.find(x=>x.id===id))]).map(q=>`<li${q.parent?' class="sub"':''}><a href="#${q.id}" style="--brand:${q.brand.bg}"${q.id===p.id?' aria-current="page"':''}>${folderSVG()}<span>${esc(q.name)}</span></a></li>`).join("")}</ul>
+    <ul>${PROJECTS.map(q=>`<li><a href="#${q.id}" style="--brand:${q.brand.bg}"${q.id===p.id||q.id===p.parent?' aria-current="page"':''}>${folderSVG()}<span>${esc(q.name)}</span></a></li>`).join("")}</ul>
   </details></section>`;
 }
 

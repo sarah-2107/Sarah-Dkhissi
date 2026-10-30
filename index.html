@@ -253,6 +253,18 @@ button.shot{cursor:zoom-in;font:inherit;color:inherit}
 .n8n .t2{fill:var(--muted);font-size:12.5px}
 .n8n .t3{fill:var(--muted);font-family:var(--mono);font-size:11.5px}
 .illus figcaption{margin-top:8px;font-size:13px;color:var(--muted);text-align:center}
+.fiches{position:relative;max-width:440px;justify-self:center;width:100%;padding:14px 0 0 14px;grid-column:1 / -1}
+.fiche{background:#fff;color:#1d1d22;border-radius:10px;border:1px solid #e3e3e8;box-shadow:0 2px 4px rgba(54,53,58,.06),0 14px 32px rgba(54,53,58,.12);overflow:hidden}
+.fiche.f2{position:absolute;inset:0 14px 14px 0;transform:rotate(-2.5deg);opacity:.9}
+.fiche.f1{position:relative}
+.fiche-head{display:flex;flex-direction:column;gap:2px;padding:14px 18px;background:var(--brand);color:#fff}
+.fiche-head .mono{font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.fiche-head b{font-family:var(--display);font-size:20px}
+.fiche dl{margin:0;padding:6px 18px 14px}
+.fiche dl div{padding:10px 0;border-bottom:1px dashed #dcdce2}
+.fiche dl div:last-child{border-bottom:0}
+.fiche dt{font-weight:700;font-size:14.5px}
+.fiche dd{margin:2px 0 0;color:#6b6b75;font-size:14px;line-height:1.4}
 .car{min-width:0}
 .car-track{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:6px}
 .car-track::-webkit-scrollbar{display:none}
@@ -565,13 +577,9 @@ const PROJECTS = [
     ],
     challenge:"Donner une voix aux fondateurs et rendre un sujet technique clair et crédible pour des décideurs.",
     metrics:[
-      {label:"Impressions moyennes par post", hint:"Profils des fondateurs"},
-      {label:"Abonnés gagnés par les fondateurs", hint:"Avant / après la mission"},
-      {label:"Taux d'engagement moyen", hint:"Statistiques LinkedIn"},
-      {label:"Prises de contact entrantes", hint:"Si les fondateurs les suivent"}
     ],
     sections:[
-      {title:"Personal branding des deux fondateurs", text:["Définition de la ligne éditoriale de chaque fondateur, rédaction et publication de leurs posts LinkedIn, avec un suivi des contenus dans Airtable."], visuals:["Post fondateur","Post fondateur"]},
+      {title:"Personal branding des deux fondateurs", text:["Au départ, l'idée était d'automatiser leurs posts LinkedIn avec des assistants IA. Mais sur LinkedIn, tout le monde le fait déjà : même ton, mêmes tournures, des posts qui se ressemblent tous. Pas question de donner cette image de l'entreprise.","J'ai donc redéfini la stratégie de personal branding des deux fondateurs et construit une méthode de copywriting sur mesure : repérer des auteurs connus dont le style plaisait à chacun, puis créer pour chaque fondateur une fiche de style, affinée post après post."], take:"Objectif : une plume qui ressemble vraiment à chaque fondateur, loin des posts génériques.", cols:1, visuals:[{fiche:true}]},
       {kind:"posts", title:"Posts LinkedIn de la page Soptima", text:["Des posts qui partent d'un problème concret des PME (données dispersées, process manuels, outils qui ne se parlent pas) pour amener l'expertise de Soptima. Texte et visuel conçus ensemble."],
         posts:[
           {img:"sopt_pennylane", body:["Et si votre reporting était déjà obsolète au moment où vous le lisez ?","Une clôture mensuelle ou un reporting financier repose souvent sur la même chose : des données disponibles, mais dispersées.","Banque, comptabilité, Excel, outils métiers, CRM… chaque brique détient une partie de la vérité mais aucune ne la restitue de façon unifiée.","Résultat : les équipes financières passent encore du temps à consolider plutôt qu'à analyser.","Le problème, vient surtout de l'absence de continuité entre les systèmes.","Des solutions comme Pennylane permettent de remettre de la cohérence dans ces flux :","• unification des données comptables et financières\n• suivi de trésorerie en temps réel\n• diminution des tâches de rapprochement manuel\n• meilleure coordination entre direction financière et cabinet comptable","Chez Soptima, notre rôle est d'intégrer ces environnements pour qu'ils fonctionnent ensemble, sans rupture de flux. On déploie et connecte Pennylane au reste de votre système pour que la finance ne soit plus un exercice de consolidation, mais un outil de pilotage."]},
@@ -780,6 +788,12 @@ let activeFilter = "Tout";
 const asset = n => "assets/"+n+".webp";
 const ratio = n => DIMS[n] ? DIMS[n][0]+"/"+DIMS[n][1] : "1/1";
 function tileHTML(v){
+  if (typeof v === "object" && v.fiche) return `<div class="fiches" aria-label="Structure d'une fiche de style">${[2,1].map(n=>`<div class="fiche f${n}"><div class="fiche-head"><span class="mono">Fiche de style</span><b>Fondateur ${n}</b></div><dl>
+    <div><dt>Manière de parler</dt><dd>Rythme, longueur des phrases, niveau de langue</dd></div>
+    <div><dt>Ton</dt><dd>Ce qui le rend reconnaissable dès la première ligne</dd></div>
+    <div><dt>Tournures</dt><dd>Expressions et structures de phrases qu'il utilise vraiment</dd></div>
+    <div><dt>Auteurs de référence</dt><dd>Les plumes connues dont il aime le style</dd></div>
+  </dl></div>`).join("")}</div>`;
   if (typeof v === "object" && v.svg === "n8n") return `<figure class="illus">${N8N_SVG}<figcaption>Exemple de workflow d'agents IA, type n8n</figcaption></figure>`;
   if (typeof v === "object" && v.note) return `<div class="media note${v.wide?" span2":""}${v.span===3?" span3":""}"><span class="note-big">${esc(v.note.big)}</span><span class="note-small">${esc(v.note.small)}</span></div>`;
   if (typeof v === "object" && v.video) return `<div class="media vid${v.wide?" wide":""}${v.tall?" tall":""}" style="aspect-ratio:${v.tall?"auto":ratio(v.video)}"><video controls playsinline preload="none" poster="assets/${v.video}_poster.webp" src="assets/${v.video}.mp4"></video><button type="button" class="vid-expand" data-video="${v.video}" aria-label="Voir la vidéo en grand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button></div>`;
